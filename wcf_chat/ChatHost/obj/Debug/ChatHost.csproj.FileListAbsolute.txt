@@ -12,3 +12,13 @@ C:\Users\samsung\Desktop\term\wcf_chat\ChatHost\obj\Debug\ChatHost.exe
 C:\Users\samsung\Desktop\term\wcf_chat\ChatHost\obj\Debug\ChatHost.pdb
 C:\Users\samsung\Desktop\term\wcf_chat\ChatHost\bin\Debug\Newtonsoft.Json.dll
 C:\Users\samsung\Desktop\term\wcf_chat\ChatHost\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\ChatHost.exe.config
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\ChatHost.exe
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\ChatHost.pdb
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.csproj.CopyComplete
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.exe
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.pdb
