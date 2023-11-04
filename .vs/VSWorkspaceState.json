@@ -7,6 +7,6 @@
     "\\wcf_chat\\app_interface\\Models",
     "\\wcf_chat\\app_interface\\ViewModels"
   ],
-  "SelectedNode": "\\wcf_chat\\wcf_chat.sln",
+  "SelectedNode": "\\wcf_chat\\app_interface\\ViewModels\\ViewModel.cs",
   "PreviewInSolutionExplorer": false
 }
