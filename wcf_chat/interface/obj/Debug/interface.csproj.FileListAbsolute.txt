@@ -1,0 +1,3 @@
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\interface\obj\Debug\interface.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\interface\obj\Debug\interface.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\interface\obj\Debug\@interface_MarkupCompile.cache

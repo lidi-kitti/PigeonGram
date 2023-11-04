@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\wcf_chat",
+    "\\wcf_chat\\app_interface",
+    "\\wcf_chat\\app_interface\\CustomControls",
+    "\\wcf_chat\\app_interface\\Models",
+    "\\wcf_chat\\app_interface\\ViewModels"
+  ],
+  "SelectedNode": "\\wcf_chat\\wcf_chat.sln",
+  "PreviewInSolutionExplorer": false
+}
