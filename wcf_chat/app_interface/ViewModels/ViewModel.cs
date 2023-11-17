@@ -26,7 +26,7 @@ namespace app_interface.ViewModels
         #region MainWindow
         #region Properties
         public string ContactName { get; set; }
-        public Uri ContactPhoto { get; set; }
+        public byte[] ContactPhoto { get; set; }
         public string LastSeen { get; set; }
 
 
@@ -466,99 +466,100 @@ namespace app_interface.ViewModels
         #region Logics
         void LoadChats()
         {
-            ////loadind data from db
-            //if(Chats== null)
-            //    Chats=new ObservableCollection<ChatListData>();
-            ////opening sql connection
-            //connection.Open();
-            ////temporary collection
-            //ObservableCollection<ChatListData> temp = new ObservableCollection<ChatListData>();
-            //using (SqlCommand command = new SqlCommand("select * from contacts ", connection))//редактировать запрос
-            //{
-            //    using(SqlDataReader reader = command.ExecuteReader())
-            //    {
-            //        //to avoid duplication
-            //        string lastItem = string.Empty;
-            //        string newItem=string.Empty;
-
-            //        while(reader.Read())
-            //        {
-            //            string time = string.Empty;
-            //            string lastmessage = string.Empty;
-            //            //if the last message is recieved from sender than update time and lastmessage variables...
-            //            if (!string.IsNullOrEmpty(reader["MsgReceivedOn"].ToString()))
-            //            {
-            //                time = Convert.ToDateTime(reader["MsgReceivedOn"].ToString()).ToString("ddd hh:mm tt");
-            //                lastmessage = reader["ReceivedMsgs"].ToString();
-            //            }
-            //            //else if we have sent last msg then update accordingly...
-            //            if (!string.IsNullOrEmpty(reader["MsgSentOn"].ToString()))
-            //            {
-            //                time = Convert.ToDateTime(reader["MsgSentOn"].ToString()).ToString("ddd hh:mm tt");
-            //                lastmessage = reader["SentMsgs"].ToString();
-            //            }
-            //            //if the chat is new or we are starting new conversation which there will be no previous sent or recieved msgs in thst case...
-            //            //show star new conversation msg
-            //            if(string.IsNullOrEmpty(lastmessage))
-            //            {
-            //                lastmessage = "Start new conversation";
-
-            //            }
-            //            //udate data in model..
-            //            ChatListData chat = new ChatListData()
-            //            {
-            //                ContactPhoto = (byte[])reader["photo"],
-            //                ContactName = reader["contactname"].ToString(),
-            //                Message = lastmessage,
-            //                LastMessageTime = time
-            //            };
-
-            //            //update
-            //            newItem = reader["contactname"].ToString();
-            //            //if last added chat isn't same as new one then only add...
-            //            if (lastItem != newItem)
-            //                temp.Add(chat);
-            //            lastItem = newItem;
-            //        }
-            //    }
-            //}
-            ////transfer data
-            //Chats = temp;
-            ////update
-            //OnPropertyChanged(nameof(Chats));
-
-            Chats = new ObservableCollection<ChatListData>()
+            //loadind data from db
+            if (Chats == null)
+                Chats = new ObservableCollection<ChatListData>();
+            //opening sql connection
+            connection.Open();
+            //temporary collection
+            ObservableCollection<ChatListData> temp = new ObservableCollection<ChatListData>();
+            using (SqlCommand command = new SqlCommand("select * from contacts p left join(select a.*, row_number() " +
+                "over(partition by a.contactname order by a.id desc) as seqnum from conversations a) a on a.ContactName = p.contactname and a.seqnum = 1 order by a.id desc", connection))//редактировать запрос
             {
-                new ChatListData
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    ContactName="Билл",
-                    ContactPhoto=new Uri("/Assets/6.jpg",UriKind.RelativeOrAbsolute),
-                    Message="Привет, как дела?",
-                    LastMessageTime="вт, 15:28",
-                    ChatIsSelected=true
-                },
-                new ChatListData
-                {
-                    ContactName="Майк",
-                    ContactPhoto=new Uri("/Assets/1.png",UriKind.RelativeOrAbsolute),
-                    Message="Проверь почту",
-                    LastMessageTime="пн, 12:01"
-                },
-                new ChatListData
-                {
-                    ContactName="Стив",
-                    ContactPhoto=new Uri("/Assets/7.png",UriKind.RelativeOrAbsolute),
-                    Message="Да, было весело)",
-                    LastMessageTime="вт, 08:10"
-                },
-                new ChatListData
-                {
-                    ContactName="Джон",
-                    ContactPhoto=new Uri("/Assets/8.jpg",UriKind.RelativeOrAbsolute),
-                    Message="Как ты?",
-                    LastMessageTime="вт, 01:00"
+                    //to avoid duplication
+                    string lastItem = string.Empty;
+                    string newItem = string.Empty;
+
+                    while (reader.Read())
+                    {
+                        string time = string.Empty;
+                        string lastmessage = string.Empty;
+                        //if the last message is recieved from sender than update time and lastmessage variables...
+                        if (!string.IsNullOrEmpty(reader["MsgReceivedOn"].ToString()))
+                        {
+                            time = Convert.ToDateTime(reader["MsgReceivedOn"].ToString()).ToString("ddd hh:mm tt");
+                            lastmessage = reader["ReceivedMsgs"].ToString();
+                        }
+                        //else if we have sent last msg then update accordingly...
+                        if (!string.IsNullOrEmpty(reader["MsgSentOn"].ToString()))
+                        {
+                            time = Convert.ToDateTime(reader["MsgSentOn"].ToString()).ToString("ddd hh:mm tt");
+                            lastmessage = reader["SentMsgs"].ToString();
+                        }
+                        //if the chat is new or we are starting new conversation which there will be no previous sent or recieved msgs in thst case...
+                        //show star new conversation msg
+                        if (string.IsNullOrEmpty(lastmessage))
+                        {
+                            lastmessage = "Start new conversation";
+
+                        }
+                        //udate data in model..
+                        ChatListData chat = new ChatListData()
+                        {
+                            ContactPhoto = (byte[])reader["photo"],
+                            ContactName = reader["contactname"].ToString(),
+                            Message = lastmessage,
+                            LastMessageTime = time
+                        };
+
+                        //update
+                        newItem = reader["contactname"].ToString();
+                        //if last added chat isn't same as new one then only add...
+                        if (lastItem != newItem)
+                            temp.Add(chat);
+                        lastItem = newItem;
+                    }
                 }
-            };
+            }
+            //transfer data
+            Chats = temp;
+            //update
+            OnPropertyChanged(nameof(Chats));
+
+            //Chats = new ObservableCollection<ChatListData>()
+            //{
+            //    new ChatListData
+            //    {
+            //        ContactName="Билл",
+            //        ContactPhoto=new Uri("/Assets/6.jpg",UriKind.RelativeOrAbsolute),
+            //        Message="Привет, как дела?",
+            //        LastMessageTime="вт, 15:28",
+            //        ChatIsSelected=true
+            //    },
+            //    new ChatListData
+            //    {
+            //        ContactName="Майк",
+            //        ContactPhoto=new Uri("/Assets/1.png",UriKind.RelativeOrAbsolute),
+            //        Message="Проверь почту",
+            //        LastMessageTime="пн, 12:01"
+            //    },
+            //    new ChatListData
+            //    {
+            //        ContactName="Стив",
+            //        ContactPhoto=new Uri("/Assets/7.png",UriKind.RelativeOrAbsolute),
+            //        Message="Да, было весело)",
+            //        LastMessageTime="вт, 08:10"
+            //    },
+            //    new ChatListData
+            //    {
+            //        ContactName="Джон",
+            //        ContactPhoto=new Uri("/Assets/8.jpg",UriKind.RelativeOrAbsolute),
+            //        Message="Как ты?",
+            //        LastMessageTime="вт, 01:00"
+            //    }
+            //};
             OnPropertyChanged();
         }
         #endregion
