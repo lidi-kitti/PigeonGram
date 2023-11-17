@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,8 +35,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.77\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -56,26 +61,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AttachedProperties\ScrollViewerAttached.cs" />
+    <Compile Include="Commands\CommandViewModel.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="CustomControls\AttachFilePopupMenu.xaml.cs">
+      <DependentUpon>AttachFilePopupMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ChatList.xaml.cs">
       <DependentUpon>ChatList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\Contactinfo.xaml.cs">
+      <DependentUpon>Contactinfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\Conversation.xaml.cs">
       <DependentUpon>Conversation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\MoreOptionsPopup.xaml.cs">
+      <DependentUpon>MoreOptionsPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\ChatConversation.cs" />
     <Compile Include="Models\ChatListData.cs" />
-    <Compile Include="ViewModels\INotifyPropertyChanged.cs" />
+    <Compile Include="Models\MoreOptionsMenu.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
     <Page Include="Assets\icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="CustomControls\AttachFilePopupMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\ChatList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControls\Contactinfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\Conversation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\MoreOptionsPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,6 +150,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,7 +167,9 @@
     <Resource Include="Assets\2.jpg" />
     <Resource Include="Assets\3.jpg" />
     <Resource Include="Assets\4.jpg" />
-    <Resource Include="Assets\5.jpg" />
+    <Resource Include="Assets\5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\6.jpg" />
     <Resource Include="Assets\7.png" />
     <Resource Include="Assets\8.jpg" />

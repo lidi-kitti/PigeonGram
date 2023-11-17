@@ -51,5 +51,10 @@ namespace app_interface
         {
             Application.Current.Shutdown();
         }
+
+        private void Conversation_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

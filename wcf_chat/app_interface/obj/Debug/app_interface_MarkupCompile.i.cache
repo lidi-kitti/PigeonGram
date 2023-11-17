@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\App.xaml
-6-560886485
+9-393505297
 
-15-1635851749
-13-946294123
-Assets\icons.xaml;CustomControls\ChatList.xaml;CustomControls\Conversation.xaml;CustomControls\StatusThumbs.xaml;icons.xaml;MainWindow.xaml;
+20513603152
+14-1695562337
+Assets\icons.xaml;CustomControls\AttachFilePopupMenu.xaml;CustomControls\ChatList.xaml;CustomControls\Contactinfo.xaml;CustomControls\Conversation.xaml;CustomControls\MoreOptionsPopup.xaml;CustomControls\StatusThumbs.xaml;icons.xaml;MainWindow.xaml;
 
-False
+True
 

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:app_interface.CustomControls" 
              xmlns:viewmodels="clr-namespace:app_interface.ViewModels"
              xmlns:customcontrols="clr-namespace:app_interface.CustomControls"
-             mc:Ignorable="d" >
+             mc:Ignorable="d" d:DesignWidth="406" >
     <UserControl.Resources>
         <!--Idea here is to have 2 Ellipce
         1) Outer Ellipse for number of status thickness dashes
@@ -14,7 +14,7 @@
         3) A small ellipse for profile photo of contact
         and a textblock for contact name-->
         <DataTemplate x:Key="thumbsTemplate">
-            <Grid Margin="15,0">
+            <Grid Margin="10,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"/>
                     <RowDefinition/>
@@ -23,20 +23,20 @@
                 <Grid>
                     <Ellipse
                     Name="outerEllipse"
-                    Width="55"
-                    Height="55"
+                    Width="50"
+                    Height="50"
                     Stretch="Uniform"
                     StrokeThickness="1"
                     Stroke="DarkSlateBlue"
-                    StrokeDashArray="5"
+                    StrokeDashArray="3"
                     StrokeDashCap="Round"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"/>
                 <Ellipse
                     
                     Name="innerEllipse"
-                    Width="50"
-                    Height="50"
+                    Width="45"
+                    Height="45"
                     Stretch="Uniform"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
@@ -82,7 +82,7 @@
             <!--Contact profile ellipse-->
                 <Ellipse
                     Name="contactphotoEllipse"
-                    Margin="40,0,0,8"
+                    Margin="25,0,0,8"
                     Width="26"
                     Height="26"
                     Stretch="UniformToFill"
@@ -117,9 +117,9 @@
         </DataTemplate>
     </UserControl.Resources>
     <ItemsControl 
-        Margin="15,0" 
+        Margin="10,0,15,0" 
         ItemTemplate="{StaticResource thumbsTemplate}" 
-        ItemsSource="{Binding statusThumbsCollection}">
+        ItemsSource="{Binding StatusThumbsCollection}">
         <ItemsControl.DataContext>
             <viewmodels:ViewModel/>
         </ItemsControl.DataContext>

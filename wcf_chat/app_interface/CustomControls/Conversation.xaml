@@ -3,11 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:app_interface.CustomControls" xmlns:viewmodels="clr-namespace:app_interface.ViewModels"
+             xmlns:local="clr-namespace:app_interface.AttachedProperties" 
+             xmlns:viewmodels="clr-namespace:app_interface.ViewModels" 
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors" d:DataContext="{d:DesignInstance Type=viewmodels:ViewModel}"
              mc:Ignorable="d" 
              Height="Auto"
-             Width="Auto">
-  
+             Width="Auto"
+             x:Name="_conversations">
+
     <UserControl.Resources>
 			<Style x:Key="MessageTextStyle" TargetType="{x:Type TextBlock}">
 				<Setter Property="FontSize" Value="15"/>
@@ -17,42 +20,41 @@
 				<Setter Property="HorizontalAlignment" Value="Center"/>
 				<Setter Property="VerticalAlignment" Value="Center"/>
 				<Setter Property="TextWrapping" Value="Wrap"/>
-				
-				<Setter Property="Text" Value="{Binding RecievedMessage}"/>
-				<Style.Triggers>
-					<DataTrigger Binding="{Binding IsMessageRecieved}" Value="False">
-						<Setter Property="Text" Value="{Binding RecievedMessage}"/>
+            <Style.Triggers>
+					<DataTrigger Binding="{Binding IsMessageReceived}" Value="False">
+						<Setter Property="Text" Value="{Binding ReceivedMessage}"/>
 					</DataTrigger>
-					<DataTrigger Binding="{Binding IsMessageRecieved}" Value="False">
-						<Setter Property="Text" Value="{Binding SendMessage}"/>
+					<DataTrigger Binding="{Binding IsMessageReceived}" Value="False">
+						<Setter Property="Text" Value="{Binding SentMessage}"/>
 					</DataTrigger>
-				</Style.Triggers>
+			</Style.Triggers>
 			</Style>
 		<DataTemplate x:Key="ItemTemplate">
 			<Button>
 				<Button.Style>
 					<Style TargetType="{x:Type Button}">
-				<Setter Property="SnapsToDevicePixels" Value="True"/>
-				<Setter Property="Height" Value="Auto"/>
-				<Setter Property="Padding" Value="4,1"/>
-				<Setter Property="Margin" Value="10"/>
-				<Setter Property="HorizontalContentAlignment" Value="Center"/>
-				<Setter Property="VerticalContentAlignment" Value="Center"/>
-				<Setter Property="VerticalAlignment" Value="Center"/>
-				<Setter Property="Background" Value="Transparent"/>
-				<Setter Property="BorderThickness" Value="0"/>
+						<Setter Property="SnapsToDevicePixels" Value="True"/>
+						<Setter Property="Height" Value="Auto"/>
+						<Setter Property="Padding" Value="4,1"/>
+						<Setter Property="Margin" Value="10"/>
+						<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						<Setter Property="VerticalContentAlignment" Value="Center"/>
+                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+						<Setter Property="Background" Value="Transparent"/>
+						<Setter Property="BorderThickness" Value="0"/>
 
-				<Setter Property="Template">
-					<Setter.Value>
-						<ControlTemplate TargetType="{x:Type Button}">
-							<Border
+						<Setter Property="Template">
+							<Setter.Value>
+								<ControlTemplate TargetType="{x:Type Button}">
+									<Border
 										   Background="{TemplateBinding Background}"
 											BorderThickness="{TemplateBinding BorderThickness}"
 											BorderBrush="{TemplateBinding BorderBrush}"
 											Padding="{TemplateBinding Padding}"
 											SnapsToDevicePixels="True"
 											x:Name="border">
-								<Grid>
+										<Grid>
 									<Grid.RowDefinitions>
 										<!--Reply bubble-->
 										<RowDefinition Height="Auto"/>
@@ -76,8 +78,10 @@
 										</Grid.ColumnDefinitions>
 										<!-- Message Bubble-->
 										<Border
-											Height="Auto"
+											Grid.Column="1"
+                                            Height="Auto"
 										    MinHeight="60"
+                                            MaxWidth="800"
 											Width="Auto"
 											VerticalAlignment="Center">
 											<Border.Style>
@@ -105,25 +109,28 @@
 										<!-- Reply button -->
 										<Button 
 											x:Name="ReplyButton"
+                                            Command="{Binding DataContext.ReplyCommand, ElementName=_conversations}"
+                                            CommandParameter="{Binding}"
 											Content="{StaticResource reply}"
 											Visibility="Collapsed"
 											Grid.Column="2"
-											
 											Style="{StaticResource IconButtonStyle}"/>
 									</Grid>
 									<!--Message time-->
 									<TextBlock
-									Grid.Row="2">
+                                        x:Name="messageTime"
+									Grid.Row="2"
+                                        Opacity="0">
 										<TextBlock.Style>
 											<Style TargetType="{x:Type TextBlock}">
 												<Setter Property="VerticalAlignment" Value="Center"/>
 												<Setter Property="Margin" Value="0,10,20,0"/>
 												<Style.Triggers>
-													<DataTrigger Binding="{Binding IsMessageRecieved}" Value="True">
-														<Setter Property="Text" Value="{Binding MsgRecievedOn}"/>
+													<DataTrigger Binding="{Binding IsMessageReceived}" Value="True">
+														<Setter Property="Text" Value="{Binding MsgReceivedOn}"/>
 														<Setter Property="HorizontalAlignment" Value="Left"/>
 													</DataTrigger>
-													<DataTrigger Binding="{Binding IsMessageRecieved}" Value="False">
+													<DataTrigger Binding="{Binding IsMessageReceived}" Value="False">
 														<Setter Property="Text" Value="{Binding MsgSentOn}"/>
 														<Setter Property="HorizontalAlignment" Value="Right"/>
 													</DataTrigger>
@@ -134,13 +141,34 @@
 								</Grid>
 							</Border>
 							<ControlTemplate.Triggers>
-								<DataTrigger Binding="{Binding IsMessageRecieved}" Value="False">
+                                
+								<DataTrigger Binding="{Binding IsMessageReceived}" Value="False">
 									<Setter TargetName="ReplyButton" Property="Grid.Column" Value="0"/>
-								</DataTrigger>
+                                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                                        </DataTrigger>
 								
 									<Trigger Property="IsMouseOver" Value="True">
-										<Setter TargetName="ReplyButton" Property="Visibility" Value="Visible"/>
-									</Trigger>
+                                            <Setter TargetName="ReplyButton" Property="Visibility" Value="Visible"/>
+
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Storyboard.TargetName="messageTime"
+                                                                         Storyboard.TargetProperty="Opacity" To="1"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+
+                                            </Trigger.EnterActions>
+                                            <Trigger.ExitActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Storyboard.TargetName="messageTime"
+                              Storyboard.TargetProperty="Opacity" To="0"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+
+                                            </Trigger.ExitActions>
+                                        </Trigger>
 								
 							</ControlTemplate.Triggers>
 						</ControlTemplate>
@@ -167,37 +195,56 @@
                     Height="50"
                     x:Name="SearchBoxBorder"
                     FocusManager.FocusedElement="{Binding ElementName=searchQuery}">
-
+            <Border.Style>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsSearchConversationBoxOpen, Mode=TwoWay, 
+                UpdateSourceTrigger=PropertyChanged, FallbackValue=False}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
             <!--FocusManager.FocusedElement="{Binding ElementName=searchQuery -> 
                     to focus our textbox when border gets focused.. -->
             <TextBox
-                        Background="Transparent"
-                        BorderThickness="0"
-                        Name="searchQuery"
-                        Padding="12,0"
-                        Text="поиск"
-                        VerticalContentAlignment="Center"
-                        VerticalAlignment="Stretch"
-                      />
-
+					Background="Transparent"
+				  BorderThickness="0"
+				  Name="searchQuery"
+				  Padding="12,0"
+				  Text="{Binding SearchConversationText, UpdateSourceTrigger=PropertyChanged}"
+				  VerticalContentAlignment="Center"
+				  VerticalAlignment="Stretch">
+                
+						<!-- key binding to search on enter key press-->
+						<TextBox.InputBindings>
+							<KeyBinding Command="{Binding SearchConversationCommand}" Key="Return"/>
+                    <KeyBinding Command="{Binding ClearConversationSearchCommand}" Key="Return"/>
+                </TextBox.InputBindings>
+            </TextBox>
 
         </Border>
         <!--body-->
         <ScrollViewer 
             Background="WhiteSmoke"
             HorizontalScrollBarVisibility="Disabled"
+            local:ScrollViewerAttachedProperty.AutoScroll="True"
             Grid.Row="1">
             <ItemsControl
-                ItemsSource="{Binding Conversations, 
+                ItemsSource="{Binding FilteredConversations, 
                 UpdateSourceTrigger=PropertyChanged}"
 				ItemTemplate="{StaticResource ItemTemplate}"
                 Margin="15,0,0,0"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-               
+               <!--animation om msg item add-->
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <!-- to-do add animation-->
-                        <StackPanel/>
+                        <StackPanel>
+                            <b:Interaction.Behaviors>
+                                <b:FluidMoveBehavior AppliesTo="Children" Duration="00:00:00.25"/>
+                            </b:Interaction.Behaviors>
+                        </StackPanel>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             
