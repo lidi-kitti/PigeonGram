@@ -22,3 +22,6 @@ C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\Cha
 C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.csproj.CopyComplete
 C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.exe
 C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\obj\Debug\ChatHost.pdb
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\ChatHost\bin\Debug\Microsoft.Xaml.Behaviors.xml

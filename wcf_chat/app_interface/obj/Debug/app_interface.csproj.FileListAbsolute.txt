@@ -23,3 +23,13 @@ C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debu
 C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\ChatList.baml
 C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.g.cs
 C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.baml
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.g.cs
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.baml
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\app_interface.csproj.CopyComplete
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.g.cs
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.baml
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.g.cs
+C:\Users\user\Source\Repos\lidi-kitti\PigeonGram\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.baml
