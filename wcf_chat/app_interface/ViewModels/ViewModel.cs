@@ -1109,7 +1109,7 @@ namespace app_interface.ViewModels
         #endregion
         #endregion
 
-        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-N9J4H06Q;Initial Catalog=Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-S3L918JB;Initial Catalog=Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         public ViewModel()
         {
             LoadStatusThumbs();

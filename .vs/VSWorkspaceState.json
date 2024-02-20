@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\wcf_chat",
+    "\\wcf_chat\\app_interface",
+    "\\wcf_chat\\app_interface\\ViewModels"
   ],
-  "SelectedNode": "\\wcf_chat.sln",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\wcf_chat\\app_interface\\ViewModels\\ViewModel.cs",
+  "PreviewInSolutionExplorer": true
 }
