@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app_interface", "app_interface\app_interface.csproj", "{E792FD91-C82E-424E-9C72-8685928F6392}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8FA0DBD2-65DE-4459-8907-CEE7F5F6B900} = {8FA0DBD2-65DE-4459-8907-CEE7F5F6B900}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C4E1942-7E6D-4B7E-893E-E76300193019}"
 	ProjectSection(SolutionItems) = preProject

@@ -38,5 +38,3 @@ C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\obj\Release\app_
 C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\obj\Release\app_interface.csproj.CopyComplete
 C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\obj\Release\app_interface.exe
 C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\obj\Release\app_interface.pdb
-C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\obj\Release\LoginRegWindow.g.cs
-C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\obj\Release\LoginRegWindow.baml
