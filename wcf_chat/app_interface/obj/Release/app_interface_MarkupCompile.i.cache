@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\App.xaml
-9-393505297
+11-70017836
 
-21-358037033
-18322818009
-Assets\icons.xaml;CustomControls\AttachFilePopupMenu.xaml;CustomControls\ChatList.xaml;CustomControls\Contactinfo.xaml;CustomControls\Conversation.xaml;CustomControls\MoreOptionsPopup.xaml;CustomControls\StatusThumbs.xaml;icons.xaml;MainWindow.xaml;
+24481571045
+201857849372
+Assets\icons.xaml;CustomControls\AttachFilePopupMenu.xaml;CustomControls\ChatList.xaml;CustomControls\Contactinfo.xaml;CustomControls\Conversation.xaml;CustomControls\MoreOptionsPopup.xaml;CustomControls\StatusThumbs.xaml;icons.xaml;LoginWindow.xaml;MainWindow.xaml;RegWindow.xaml;
 
-False
+True
 

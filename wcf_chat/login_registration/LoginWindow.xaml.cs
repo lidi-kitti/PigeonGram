@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
+using System.Diagnostics;
 
 namespace login_registration
 {
@@ -45,7 +46,15 @@ namespace login_registration
 
             if(table.Rows.Count == 1) 
             {
-                MessageBox.Show("Вы успешно вошли!");
+               MessageBox.Show("Вы успешно вошли!");
+
+                //Process.Start(@"C:/Users/samsung/source/repos/PigeonGram/wcf_chat/app_interface/bin/Debug/app_interface.exe");
+
+                //app_interface.MainWindow appWindow = new app_interface.MainWindow();
+                //appWindow = new app_interface.MainWindow();
+                //appWindow.Activate();
+                //appWindow.Show();
+                //this.Hide();
             }
             else
             {
@@ -58,6 +67,7 @@ namespace login_registration
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Hide();
+
         }
     }
 }
