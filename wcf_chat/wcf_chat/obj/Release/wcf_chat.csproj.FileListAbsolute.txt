@@ -1,0 +1,11 @@
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\bin\Release\wcf_chat.dll.config
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\bin\Release\wcf_chat.dll
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\bin\Release\wcf_chat.pdb
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\bin\Release\Microsoft.Xaml.Behaviors.dll
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\bin\Release\Microsoft.Xaml.Behaviors.pdb
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\bin\Release\Microsoft.Xaml.Behaviors.xml
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\obj\Release\wcf_chat.csproj.AssemblyReference.cache
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\obj\Release\wcf_chat.csproj.CoreCompileInputs.cache
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\obj\Release\wcf_chat.csproj.CopyComplete
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\obj\Release\wcf_chat.dll
+C:\Users\samsung\source\repos\PigeonGram\wcf_chat\wcf_chat\obj\Release\wcf_chat.pdb
