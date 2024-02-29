@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="app_interface.exe" size="1091056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="app_interface.exe" size="1091568">
       <assemblyIdentity name="app_interface" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3vawjGMxgLDa7nedk2gZx2mRf4P66iPY+zagUg0aw2Q=</dsig:DigestValue>
+        <dsig:DigestValue>cyRwiLNGDtZqUe+R0twvPfi4bpvYh61u/Q8HMLo+yao=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -89,13 +89,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="app_interface.exe.config" size="526">
+  <file name="app_interface.exe.config" size="512">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>RfMvMwzHEoTZA0/NH1Afz5SSvNgxuEeyXptSlFReWFw=</dsig:DigestValue>
+      <dsig:DigestValue>vx07it2yIfLV1xit2DdiNxtS3maJkayVGTNij1ujITU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
