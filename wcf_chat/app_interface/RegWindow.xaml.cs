@@ -81,7 +81,7 @@ namespace login_registration
                 confirmPasswordBox.ToolTip = "";
                 confirmPasswordBox.Background = Brushes.Transparent;
 
-                string querystring = $"insert into register (first_name, last_name, email, password_user) values ('{firstName}', '{lastName}', '{email}', '{password}')";
+                string querystring = $"insert into users_db (first_name, last_name, email, password_user) values ('{firstName}', '{lastName}', '{email}', '{password}')";
                 SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
                 dataBase.openConnection();

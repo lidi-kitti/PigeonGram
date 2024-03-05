@@ -8,7 +8,7 @@ namespace login_registration
 
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-S3L918JB; Initial Catalog=test; Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-S3L918JB\SQLDEGREE; Initial Catalog=Database; Integrated Security=True");
 
 
 

@@ -40,7 +40,7 @@ namespace login_registration
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select * from register where email = '{email}' and password_user = '{password}'";
+            string querystring = $"select * from users_db where email = '{email}' and password_user = '{password}'";
 
             SqlCommand command = new SqlCommand(querystring, database.getConnection());
 
