@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:app_interface.AttachedProperties" 
              xmlns:viewmodels="clr-namespace:app_interface.ViewModels" 
-             xmlns:b="http://schemas.microsoft.com/xaml/behaviors" 
-             d:DataContext="{d:DesignInstance Type=viewmodels:ViewModel}"
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors" d:DataContext="{d:DesignInstance Type=viewmodels:ViewModel}"
              mc:Ignorable="d" 
              Height="Auto"
              Width="Auto"
@@ -22,7 +21,7 @@
 				<Setter Property="VerticalAlignment" Value="Center"/>
 				<Setter Property="TextWrapping" Value="Wrap"/>
             <Style.Triggers>
-					<DataTrigger Binding="{Binding IsMessageReceived}" Value="True">
+					<DataTrigger Binding="{Binding IsMessageReceived}" Value="False">
 						<Setter Property="Text" Value="{Binding ReceivedMessage}"/>
 					</DataTrigger>
 					<DataTrigger Binding="{Binding IsMessageReceived}" Value="False">
@@ -72,7 +71,7 @@
 											<ColumnDefinition Width="Auto"/>
 											
 											<!-- Column Message Bubble-->
-											<ColumnDefinition Width="300"/>
+											<ColumnDefinition/>
 											
 											<!-- Column reply button-->
 											<ColumnDefinition Width="Auto"/>
@@ -87,15 +86,11 @@
 											VerticalAlignment="Center">
 											<Border.Style>
 												<Style TargetType="{x:Type Border}">
-                                                        
-                                                             
 													<Setter Property="CornerRadius" Value="30,30,30,0"/>
 													<Setter Property="Background" Value="#dce1de"/>
 													<Setter Property="HorizontalAlignment" Value="Left"/>
-                                                        
-                                                            <Style.Triggers>
-
-                                                            <DataTrigger Binding="{Binding IsMessageReceived}" Value="False">
+													<Style.Triggers>
+														<DataTrigger Binding="{Binding IsReceived}" Value="False">
 															<Setter Property="CornerRadius" Value="30,30,0,30"/>
 															<Setter Property="Background" Value="DeepSkyBlue"/>
 															<Setter Property="HorizontalAlignment" Value="Right"/>
@@ -124,7 +119,7 @@
 									<!--Message time-->
 									<TextBlock
                                         x:Name="messageTime"
-										Grid.Row="2"
+									Grid.Row="2"
                                         Opacity="0">
 										<TextBlock.Style>
 											<Style TargetType="{x:Type TextBlock}">
@@ -195,7 +190,7 @@
         <Border
                     Background="#dce1de"
                     CornerRadius="15"
-                   
+                    
                     Margin="20"
                     Height="50"
                     x:Name="SearchBoxBorder"
@@ -235,14 +230,12 @@
             Background="WhiteSmoke"
             HorizontalScrollBarVisibility="Disabled"
             local:ScrollViewerAttachedProperty.AutoScroll="True"
-            Grid.Row="1"
-            
-            >
+            Grid.Row="1">
             <ItemsControl
                 ItemsSource="{Binding FilteredConversations, 
                 UpdateSourceTrigger=PropertyChanged}"
 				ItemTemplate="{StaticResource ItemTemplate}"
-                Margin="10,0,0,0"
+                Margin="15,0,0,0"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                <!--animation om msg item add-->
                 <ItemsControl.ItemsPanel>

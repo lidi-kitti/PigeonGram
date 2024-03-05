@@ -8,7 +8,7 @@ namespace app_interface.Models
     public class ChatListData: INotifyPropertyChanged
     {
         public string ContactName { get; set; }
-        public byte[] ContactPhoto { get; set; }
+        public Uri ContactPhoto { get; set; }
         protected string message;
         public string Message { 
             get 

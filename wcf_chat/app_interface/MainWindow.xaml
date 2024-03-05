@@ -335,7 +335,7 @@
                 <Border
                 CornerRadius="15"
                 Background="#dce1de"
-                Margin="15,8"
+                Margin="15"
                 Grid.Row="2">
                     <Border.Style>
                         <Style TargetType="{x:Type Border}">
