@@ -1,17 +1,21 @@
 ﻿using app_interface.Commands;
 using app_interface.CustomControls;
 using app_interface.Models;
+using login_registration;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 
 namespace app_interface.ViewModels
@@ -485,7 +489,7 @@ namespace app_interface.ViewModels
             //        {
             //            string time = string.Empty;
             //            string lastmessage = string.Empty;
-            //            //if the last message is recieved from sender than update time and lastmessage variables...
+            //            //if the last message is Received from sender than update time and lastmessage variables...
             //            if (!string.IsNullOrEmpty(reader["MsgReceivedOn"].ToString()))
             //            {
             //                time = Convert.ToDateTime(reader["MsgReceivedOn"].ToString()).ToString("ddd hh:mm tt");
@@ -497,7 +501,7 @@ namespace app_interface.ViewModels
             //                time = Convert.ToDateTime(reader["MsgSentOn"].ToString()).ToString("ddd hh:mm tt");
             //                lastmessage = reader["SentMsgs"].ToString();
             //            }
-            //            //if the chat is new or we are starting new conversation which there will be no previous sent or recieved msgs in thst case...
+            //            //if the chat is new or we are starting new conversation which there will be no previous sent or Received msgs in thst case...
             //            //show star new conversation msg
             //            if(string.IsNullOrEmpty(lastmessage))
             //            {
@@ -880,8 +884,8 @@ namespace app_interface.ViewModels
         }
         public void SendMessage()
         {
-           //send message only when the textbox is not empty
-            if(!string.IsNullOrEmpty(MessageText))
+            DataBase dataBase = new DataBase();
+            if (!string.IsNullOrEmpty(MessageText))
             {
                 var conversation = new ChatConversation()
                 {
@@ -911,7 +915,7 @@ namespace app_interface.ViewModels
                 OnPropertyChanged("MessageToReplyText");
             }
         }
-        //move the chat contact on top when new message is sent or recieved
+        //move the chat contact on top when new message is sent or Received
         protected void UpdateChatAndMoveUp(ObservableCollection<ChatListData> chatList, ChatConversation conversation)
         {
             //check if the message sent is to selected contact or not
@@ -923,7 +927,7 @@ namespace app_interface.ViewModels
                 chat.Message = MessageText;
                 chat.LastMessageTime = conversation.MsgSentOn;
 
-                //move chat on top when new msg is recieved/sent...
+                //move chat on top when new msg is Received/sent...
                 chatList.Move(chatList.IndexOf(chat), 0);
                 //update collection
                 OnPropertyChanged("Chats");
@@ -1109,7 +1113,7 @@ namespace app_interface.ViewModels
         #endregion
         #endregion
 
-        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-S3L918JB;Initial Catalog=Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection connection = new SqlConnection(@"Data Source=""10.0.13.26\SQLDEGREE, 1433""; Network Library = DBMSSOCN; Initial Catalog = Database; User ID=sa;Password=12345; Connect Timeout=30;Encrypt=False");
         public ViewModel()
         {
             LoadStatusThumbs();
@@ -1123,11 +1127,5 @@ namespace app_interface.ViewModels
         {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
         }
-
-       
-
-
-
-
     }
 }

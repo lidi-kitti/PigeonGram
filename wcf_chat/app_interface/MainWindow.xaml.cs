@@ -1,4 +1,5 @@
 ﻿using login_registration;
+using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,13 @@ namespace app_interface
 
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
             this.Hide();
+           
+
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -58,7 +62,7 @@ namespace app_interface
 
         private void Conversation_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

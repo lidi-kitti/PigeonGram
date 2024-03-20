@@ -598,7 +598,7 @@ namespace app_interface {
             
             private global::System.Data.DataColumn columnReceivedMsgs;
             
-            private global::System.Data.DataColumn columnMsgRecievedOn;
+            private global::System.Data.DataColumn columnMsgReceivedOn;
             
             private global::System.Data.DataColumn columnIsReplied;
             
@@ -608,7 +608,7 @@ namespace app_interface {
             
             private global::System.Data.DataColumn columnMsgSentOn;
             
-            private global::System.Data.DataColumn columnDocumentRecieved;
+            private global::System.Data.DataColumn columnDocumentReceived;
             
             private global::System.Data.DataColumn columnDocumentSent;
             
@@ -679,9 +679,9 @@ namespace app_interface {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MsgRecievedOnColumn {
+            public global::System.Data.DataColumn MsgReceivedOnColumn {
                 get {
-                    return this.columnMsgRecievedOn;
+                    return this.columnMsgReceivedOn;
                 }
             }
             
@@ -719,9 +719,9 @@ namespace app_interface {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DocumentRecievedColumn {
+            public global::System.Data.DataColumn DocumentReceivedColumn {
                 get {
-                    return this.columnDocumentRecieved;
+                    return this.columnDocumentReceived;
                 }
             }
             
@@ -770,19 +770,19 @@ namespace app_interface {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public conversationRow AddconversationRow(int id, string ContactName, string LastOnline, string ReceivedMsgs, System.DateTime MsgRecievedOn, string IsReplied, string IsRead, string SentMsgs, System.DateTime MsgSentOn, string DocumentRecieved, string DocumentSent) {
+            public conversationRow AddconversationRow(int id, string ContactName, string LastOnline, string ReceivedMsgs, System.DateTime MsgReceivedOn, string IsReplied, string IsRead, string SentMsgs, System.DateTime MsgSentOn, string DocumentReceived, string DocumentSent) {
                 conversationRow rowconversationRow = ((conversationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         ContactName,
                         LastOnline,
                         ReceivedMsgs,
-                        MsgRecievedOn,
+                        MsgReceivedOn,
                         IsReplied,
                         IsRead,
                         SentMsgs,
                         MsgSentOn,
-                        DocumentRecieved,
+                        DocumentReceived,
                         DocumentSent};
                 rowconversationRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowconversationRow);
@@ -817,12 +817,12 @@ namespace app_interface {
                 this.columnContactName = base.Columns["ContactName"];
                 this.columnLastOnline = base.Columns["LastOnline"];
                 this.columnReceivedMsgs = base.Columns["ReceivedMsgs"];
-                this.columnMsgRecievedOn = base.Columns["MsgRecievedOn"];
+                this.columnMsgReceivedOn = base.Columns["MsgReceivedOn"];
                 this.columnIsReplied = base.Columns["IsReplied"];
                 this.columnIsRead = base.Columns["IsRead"];
                 this.columnSentMsgs = base.Columns["SentMsgs"];
                 this.columnMsgSentOn = base.Columns["MsgSentOn"];
-                this.columnDocumentRecieved = base.Columns["DocumentRecieved"];
+                this.columnDocumentReceived = base.Columns["DocumentReceived"];
                 this.columnDocumentSent = base.Columns["DocumentSent"];
             }
             
@@ -837,8 +837,8 @@ namespace app_interface {
                 base.Columns.Add(this.columnLastOnline);
                 this.columnReceivedMsgs = new global::System.Data.DataColumn("ReceivedMsgs", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReceivedMsgs);
-                this.columnMsgRecievedOn = new global::System.Data.DataColumn("MsgRecievedOn", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMsgRecievedOn);
+                this.columnMsgReceivedOn = new global::System.Data.DataColumn("MsgReceivedOn", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMsgReceivedOn);
                 this.columnIsReplied = new global::System.Data.DataColumn("IsReplied", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsReplied);
                 this.columnIsRead = new global::System.Data.DataColumn("IsRead", typeof(string), null, global::System.Data.MappingType.Element);
@@ -847,8 +847,8 @@ namespace app_interface {
                 base.Columns.Add(this.columnSentMsgs);
                 this.columnMsgSentOn = new global::System.Data.DataColumn("MsgSentOn", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMsgSentOn);
-                this.columnDocumentRecieved = new global::System.Data.DataColumn("DocumentRecieved", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDocumentRecieved);
+                this.columnDocumentReceived = new global::System.Data.DataColumn("DocumentReceived", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDocumentReceived);
                 this.columnDocumentSent = new global::System.Data.DataColumn("DocumentSent", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDocumentSent);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -861,12 +861,12 @@ namespace app_interface {
                 this.columnLastOnline.MaxLength = 10;
                 this.columnReceivedMsgs.AllowDBNull = false;
                 this.columnReceivedMsgs.MaxLength = 50;
-                this.columnMsgRecievedOn.AllowDBNull = false;
+                this.columnMsgReceivedOn.AllowDBNull = false;
                 this.columnIsReplied.MaxLength = 10;
                 this.columnIsRead.MaxLength = 10;
                 this.columnSentMsgs.AllowDBNull = false;
                 this.columnSentMsgs.MaxLength = 50;
-                this.columnDocumentRecieved.MaxLength = 10;
+                this.columnDocumentReceived.MaxLength = 10;
                 this.columnDocumentSent.MaxLength = 10;
             }
             
@@ -1153,12 +1153,12 @@ namespace app_interface {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime MsgRecievedOn {
+            public System.DateTime MsgReceivedOn {
                 get {
-                    return ((global::System.DateTime)(this[this.tableconversation.MsgRecievedOnColumn]));
+                    return ((global::System.DateTime)(this[this.tableconversation.MsgReceivedOnColumn]));
                 }
                 set {
-                    this[this.tableconversation.MsgRecievedOnColumn] = value;
+                    this[this.tableconversation.MsgReceivedOnColumn] = value;
                 }
             }
             
@@ -1223,17 +1223,17 @@ namespace app_interface {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string DocumentRecieved {
+            public string DocumentReceived {
                 get {
                     try {
-                        return ((string)(this[this.tableconversation.DocumentRecievedColumn]));
+                        return ((string)(this[this.tableconversation.DocumentReceivedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'DocumentRecieved\' в таблице \'conversation\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'DocumentReceived\' в таблице \'conversation\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableconversation.DocumentRecievedColumn] = value;
+                    this[this.tableconversation.DocumentReceivedColumn] = value;
                 }
             }
             
@@ -1291,14 +1291,14 @@ namespace app_interface {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDocumentRecievedNull() {
-                return this.IsNull(this.tableconversation.DocumentRecievedColumn);
+            public bool IsDocumentReceivedNull() {
+                return this.IsNull(this.tableconversation.DocumentReceivedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDocumentRecievedNull() {
-                this[this.tableconversation.DocumentRecievedColumn] = global::System.Convert.DBNull;
+            public void SetDocumentReceivedNull() {
+                this[this.tableconversation.DocumentReceivedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1756,23 +1756,23 @@ namespace app_interface.DatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ContactName", "ContactName");
             tableMapping.ColumnMappings.Add("LastOnline", "LastOnline");
             tableMapping.ColumnMappings.Add("ReceivedMsgs", "ReceivedMsgs");
-            tableMapping.ColumnMappings.Add("MsgRecievedOn", "MsgRecievedOn");
+            tableMapping.ColumnMappings.Add("MsgReceivedOn", "MsgReceivedOn");
             tableMapping.ColumnMappings.Add("IsReplied", "IsReplied");
             tableMapping.ColumnMappings.Add("IsRead", "IsRead");
             tableMapping.ColumnMappings.Add("SentMsgs", "SentMsgs");
             tableMapping.ColumnMappings.Add("MsgSentOn", "MsgSentOn");
-            tableMapping.ColumnMappings.Add("DocumentRecieved", "DocumentRecieved");
+            tableMapping.ColumnMappings.Add("DocumentReceived", "DocumentReceived");
             tableMapping.ColumnMappings.Add("DocumentSent", "DocumentSent");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[conversation] WHERE (([id] = @Original_id) AND ([ContactName] = @Original_ContactName) AND ([LastOnline] = @Original_LastOnline) AND ([ReceivedMsgs] = @Original_ReceivedMsgs) AND ([MsgRecievedOn] = @Original_MsgRecievedOn) AND ((@IsNull_IsReplied = 1 AND [IsReplied] IS NULL) OR ([IsReplied] = @Original_IsReplied)) AND ((@IsNull_IsRead = 1 AND [IsRead] IS NULL) OR ([IsRead] = @Original_IsRead)) AND ([SentMsgs] = @Original_SentMsgs) AND ((@IsNull_MsgSentOn = 1 AND [MsgSentOn] IS NULL) OR ([MsgSentOn] = @Original_MsgSentOn)) AND ((@IsNull_DocumentRecieved = 1 AND [DocumentRecieved] IS NULL) OR ([DocumentRecieved] = @Original_DocumentRecieved)) AND ((@IsNull_DocumentSent = 1 AND [DocumentSent] IS NULL) OR ([DocumentSent] = @Original_DocumentSent)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[conversation] WHERE (([id] = @Original_id) AND ([ContactName] = @Original_ContactName) AND ([LastOnline] = @Original_LastOnline) AND ([ReceivedMsgs] = @Original_ReceivedMsgs) AND ([MsgReceivedOn] = @Original_MsgReceivedOn) AND ((@IsNull_IsReplied = 1 AND [IsReplied] IS NULL) OR ([IsReplied] = @Original_IsReplied)) AND ((@IsNull_IsRead = 1 AND [IsRead] IS NULL) OR ([IsRead] = @Original_IsRead)) AND ([SentMsgs] = @Original_SentMsgs) AND ((@IsNull_MsgSentOn = 1 AND [MsgSentOn] IS NULL) OR ([MsgSentOn] = @Original_MsgSentOn)) AND ((@IsNull_DocumentReceived = 1 AND [DocumentReceived] IS NULL) OR ([DocumentReceived] = @Original_DocumentReceived)) AND ((@IsNull_DocumentSent = 1 AND [DocumentSent] IS NULL) OR ([DocumentSent] = @Original_DocumentSent)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastOnline", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastOnline", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceivedMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivedMsgs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MsgRecievedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgRecievedOn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MsgReceivedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgReceivedOn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsReplied", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsReplied", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsReplied", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsReplied", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsRead", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsRead", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1780,47 +1780,47 @@ namespace app_interface.DatabaseDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SentMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SentMsgs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MsgSentOn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgSentOn", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MsgSentOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgSentOn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DocumentRecieved", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentRecieved", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DocumentRecieved", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentRecieved", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DocumentReceived", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentReceived", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DocumentReceived", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentReceived", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DocumentSent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentSent", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DocumentSent", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentSent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[conversation] ([id], [ContactName], [LastOnline], [ReceivedMsgs], [MsgRecievedOn], [IsReplied], [IsRead], [SentMsgs], [MsgSentOn], [DocumentRecieved], [DocumentSent]) VALUES (@id, @ContactName, @LastOnline, @ReceivedMsgs, @MsgRecievedOn, @IsReplied, @IsRead, @SentMsgs, @MsgSentOn, @DocumentRecieved, @DocumentSent);
-SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRead, SentMsgs, MsgSentOn, DocumentRecieved, DocumentSent FROM conversation WHERE (id = @id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[conversation] ([id], [ContactName], [LastOnline], [ReceivedMsgs], [MsgReceivedOn], [IsReplied], [IsRead], [SentMsgs], [MsgSentOn], [DocumentReceived], [DocumentSent]) VALUES (@id, @ContactName, @LastOnline, @ReceivedMsgs, @MsgReceivedOn, @IsReplied, @IsRead, @SentMsgs, @MsgSentOn, @DocumentReceived, @DocumentSent);
+SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgReceivedOn, IsReplied, IsRead, SentMsgs, MsgSentOn, DocumentReceived, DocumentSent FROM conversation WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastOnline", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastOnline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReceivedMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivedMsgs", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MsgRecievedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgRecievedOn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MsgReceivedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgReceivedOn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsReplied", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsReplied", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsRead", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsRead", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SentMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SentMsgs", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MsgSentOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgSentOn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocumentRecieved", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentRecieved", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocumentReceived", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentReceived", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocumentSent", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentSent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[conversation] SET [id] = @id, [ContactName] = @ContactName, [LastOnline] = @LastOnline, [ReceivedMsgs] = @ReceivedMsgs, [MsgRecievedOn] = @MsgRecievedOn, [IsReplied] = @IsReplied, [IsRead] = @IsRead, [SentMsgs] = @SentMsgs, [MsgSentOn] = @MsgSentOn, [DocumentRecieved] = @DocumentRecieved, [DocumentSent] = @DocumentSent WHERE (([id] = @Original_id) AND ([ContactName] = @Original_ContactName) AND ([LastOnline] = @Original_LastOnline) AND ([ReceivedMsgs] = @Original_ReceivedMsgs) AND ([MsgRecievedOn] = @Original_MsgRecievedOn) AND ((@IsNull_IsReplied = 1 AND [IsReplied] IS NULL) OR ([IsReplied] = @Original_IsReplied)) AND ((@IsNull_IsRead = 1 AND [IsRead] IS NULL) OR ([IsRead] = @Original_IsRead)) AND ([SentMsgs] = @Original_SentMsgs) AND ((@IsNull_MsgSentOn = 1 AND [MsgSentOn] IS NULL) OR ([MsgSentOn] = @Original_MsgSentOn)) AND ((@IsNull_DocumentRecieved = 1 AND [DocumentRecieved] IS NULL) OR ([DocumentRecieved] = @Original_DocumentRecieved)) AND ((@IsNull_DocumentSent = 1 AND [DocumentSent] IS NULL) OR ([DocumentSent] = @Original_DocumentSent)));
-SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRead, SentMsgs, MsgSentOn, DocumentRecieved, DocumentSent FROM conversation WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[conversation] SET [id] = @id, [ContactName] = @ContactName, [LastOnline] = @LastOnline, [ReceivedMsgs] = @ReceivedMsgs, [MsgReceivedOn] = @MsgReceivedOn, [IsReplied] = @IsReplied, [IsRead] = @IsRead, [SentMsgs] = @SentMsgs, [MsgSentOn] = @MsgSentOn, [DocumentReceived] = @DocumentReceived, [DocumentSent] = @DocumentSent WHERE (([id] = @Original_id) AND ([ContactName] = @Original_ContactName) AND ([LastOnline] = @Original_LastOnline) AND ([ReceivedMsgs] = @Original_ReceivedMsgs) AND ([MsgReceivedOn] = @Original_MsgReceivedOn) AND ((@IsNull_IsReplied = 1 AND [IsReplied] IS NULL) OR ([IsReplied] = @Original_IsReplied)) AND ((@IsNull_IsRead = 1 AND [IsRead] IS NULL) OR ([IsRead] = @Original_IsRead)) AND ([SentMsgs] = @Original_SentMsgs) AND ((@IsNull_MsgSentOn = 1 AND [MsgSentOn] IS NULL) OR ([MsgSentOn] = @Original_MsgSentOn)) AND ((@IsNull_DocumentReceived = 1 AND [DocumentReceived] IS NULL) OR ([DocumentReceived] = @Original_DocumentReceived)) AND ((@IsNull_DocumentSent = 1 AND [DocumentSent] IS NULL) OR ([DocumentSent] = @Original_DocumentSent)));
+SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgReceivedOn, IsReplied, IsRead, SentMsgs, MsgSentOn, DocumentReceived, DocumentSent FROM conversation WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastOnline", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastOnline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReceivedMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivedMsgs", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MsgRecievedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgRecievedOn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MsgReceivedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgReceivedOn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsReplied", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsReplied", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsRead", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsRead", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SentMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SentMsgs", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MsgSentOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgSentOn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocumentRecieved", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentRecieved", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocumentReceived", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentReceived", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocumentSent", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentSent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastOnline", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastOnline", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceivedMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivedMsgs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MsgRecievedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgRecievedOn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MsgReceivedOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgReceivedOn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsReplied", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsReplied", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsReplied", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsReplied", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsRead", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsRead", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1828,8 +1828,8 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SentMsgs", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SentMsgs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MsgSentOn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgSentOn", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MsgSentOn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MsgSentOn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DocumentRecieved", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentRecieved", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DocumentRecieved", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentRecieved", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DocumentReceived", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentReceived", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DocumentReceived", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentReceived", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DocumentSent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentSent", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DocumentSent", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DocumentSent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -1847,8 +1847,8 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRea" +
-                "d, SentMsgs, MsgSentOn, DocumentRecieved, DocumentSent FROM dbo.conversation";
+            this._commandCollection[0].CommandText = "SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgReceivedOn, IsReplied, IsRea" +
+                "d, SentMsgs, MsgSentOn, DocumentReceived, DocumentSent FROM dbo.conversation";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1909,7 +1909,7 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_ContactName, string Original_LastOnline, string Original_ReceivedMsgs, System.DateTime Original_MsgRecievedOn, string Original_IsReplied, string Original_IsRead, string Original_SentMsgs, global::System.Nullable<global::System.DateTime> Original_MsgSentOn, string Original_DocumentRecieved, string Original_DocumentSent) {
+        public virtual int Delete(int Original_id, string Original_ContactName, string Original_LastOnline, string Original_ReceivedMsgs, System.DateTime Original_MsgReceivedOn, string Original_IsReplied, string Original_IsRead, string Original_SentMsgs, global::System.Nullable<global::System.DateTime> Original_MsgSentOn, string Original_DocumentReceived, string Original_DocumentSent) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_ContactName == null)) {
                 throw new global::System.ArgumentNullException("Original_ContactName");
@@ -1929,7 +1929,7 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_ReceivedMsgs));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_MsgRecievedOn));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_MsgReceivedOn));
             if ((Original_IsReplied == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -1960,13 +1960,13 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_DocumentRecieved == null)) {
+            if ((Original_DocumentReceived == null)) {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_DocumentRecieved));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_DocumentReceived));
             }
             if ((Original_DocumentSent == null)) {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
@@ -1996,7 +1996,7 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id, string ContactName, string LastOnline, string ReceivedMsgs, System.DateTime MsgRecievedOn, string IsReplied, string IsRead, string SentMsgs, global::System.Nullable<global::System.DateTime> MsgSentOn, string DocumentRecieved, string DocumentSent) {
+        public virtual int Insert(int id, string ContactName, string LastOnline, string ReceivedMsgs, System.DateTime MsgReceivedOn, string IsReplied, string IsRead, string SentMsgs, global::System.Nullable<global::System.DateTime> MsgSentOn, string DocumentReceived, string DocumentSent) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
             if ((ContactName == null)) {
                 throw new global::System.ArgumentNullException("ContactName");
@@ -2016,7 +2016,7 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ReceivedMsgs));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(MsgRecievedOn));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(MsgReceivedOn));
             if ((IsReplied == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
@@ -2041,11 +2041,11 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((DocumentRecieved == null)) {
+            if ((DocumentReceived == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(DocumentRecieved));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(DocumentReceived));
             }
             if ((DocumentSent == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
@@ -2078,23 +2078,23 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
                     string ContactName, 
                     string LastOnline, 
                     string ReceivedMsgs, 
-                    System.DateTime MsgRecievedOn, 
+                    System.DateTime MsgReceivedOn, 
                     string IsReplied, 
                     string IsRead, 
                     string SentMsgs, 
                     global::System.Nullable<global::System.DateTime> MsgSentOn, 
-                    string DocumentRecieved, 
+                    string DocumentReceived, 
                     string DocumentSent, 
                     int Original_id, 
                     string Original_ContactName, 
                     string Original_LastOnline, 
                     string Original_ReceivedMsgs, 
-                    System.DateTime Original_MsgRecievedOn, 
+                    System.DateTime Original_MsgReceivedOn, 
                     string Original_IsReplied, 
                     string Original_IsRead, 
                     string Original_SentMsgs, 
                     global::System.Nullable<global::System.DateTime> Original_MsgSentOn, 
-                    string Original_DocumentRecieved, 
+                    string Original_DocumentReceived, 
                     string Original_DocumentSent) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
             if ((ContactName == null)) {
@@ -2115,7 +2115,7 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ReceivedMsgs));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(MsgRecievedOn));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(MsgReceivedOn));
             if ((IsReplied == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
@@ -2140,11 +2140,11 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((DocumentRecieved == null)) {
+            if ((DocumentReceived == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(DocumentRecieved));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(DocumentReceived));
             }
             if ((DocumentSent == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
@@ -2171,7 +2171,7 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_ReceivedMsgs));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_MsgRecievedOn));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_MsgReceivedOn));
             if ((Original_IsReplied == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
@@ -2202,13 +2202,13 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_DocumentRecieved == null)) {
+            if ((Original_DocumentReceived == null)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_DocumentRecieved));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_DocumentReceived));
             }
             if ((Original_DocumentSent == null)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
@@ -2242,25 +2242,25 @@ SELECT id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRe
                     string ContactName, 
                     string LastOnline, 
                     string ReceivedMsgs, 
-                    System.DateTime MsgRecievedOn, 
+                    System.DateTime MsgReceivedOn, 
                     string IsReplied, 
                     string IsRead, 
                     string SentMsgs, 
                     global::System.Nullable<global::System.DateTime> MsgSentOn, 
-                    string DocumentRecieved, 
+                    string DocumentReceived, 
                     string DocumentSent, 
                     int Original_id, 
                     string Original_ContactName, 
                     string Original_LastOnline, 
                     string Original_ReceivedMsgs, 
-                    System.DateTime Original_MsgRecievedOn, 
+                    System.DateTime Original_MsgReceivedOn, 
                     string Original_IsReplied, 
                     string Original_IsRead, 
                     string Original_SentMsgs, 
                     global::System.Nullable<global::System.DateTime> Original_MsgSentOn, 
-                    string Original_DocumentRecieved, 
+                    string Original_DocumentReceived, 
                     string Original_DocumentSent) {
-            return this.Update(Original_id, ContactName, LastOnline, ReceivedMsgs, MsgRecievedOn, IsReplied, IsRead, SentMsgs, MsgSentOn, DocumentRecieved, DocumentSent, Original_id, Original_ContactName, Original_LastOnline, Original_ReceivedMsgs, Original_MsgRecievedOn, Original_IsReplied, Original_IsRead, Original_SentMsgs, Original_MsgSentOn, Original_DocumentRecieved, Original_DocumentSent);
+            return this.Update(Original_id, ContactName, LastOnline, ReceivedMsgs, MsgReceivedOn, IsReplied, IsRead, SentMsgs, MsgSentOn, DocumentReceived, DocumentSent, Original_id, Original_ContactName, Original_LastOnline, Original_ReceivedMsgs, Original_MsgReceivedOn, Original_IsReplied, Original_IsRead, Original_SentMsgs, Original_MsgSentOn, Original_DocumentReceived, Original_DocumentSent);
         }
     }
     

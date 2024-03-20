@@ -246,6 +246,7 @@
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Visibility, ElementName=GridConv}" Value="Visible">
                                 <Setter Property="Visibility" Value="Collapsed"/>
+                               
                             </DataTrigger>
                     </Style.Triggers>
                     </Style>

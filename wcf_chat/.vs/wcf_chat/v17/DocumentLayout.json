@@ -1,0 +1,276 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\pigeongram\\PigeonGram\\wcf_chat\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|d:\\pigeongram\\pigeongram\\wcf_chat\\app_interface\\viewmodels\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\viewmodels\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\customcontrols\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\customcontrols\\chatlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\customcontrols\\conversation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\customcontrols\\conversation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\customcontrols\\contactinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\customcontrols\\contactinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\customcontrols\\attachfilepopupmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\customcontrols\\attachfilepopupmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\customcontrols\\statusthumbs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\customcontrols\\statusthumbs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\customcontrols\\moreoptionspopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\customcontrols\\moreoptionspopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\customcontrols\\conversation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\customcontrols\\conversation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\models\\chatlistdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\models\\chatlistdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC826EB2-F3FE-4171-B1D9-79C0E467EBC9}|SignalRApp\\SignalRApp.csproj|d:\\pigeongram\\pigeongram\\wcf_chat\\signalrapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC826EB2-F3FE-4171-B1D9-79C0E467EBC9}|SignalRApp\\SignalRApp.csproj|solutionrelative:signalrapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC826EB2-F3FE-4171-B1D9-79C0E467EBC9}|SignalRApp\\SignalRApp.csproj|d:\\pigeongram\\pigeongram\\wcf_chat\\signalrapp\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC826EB2-F3FE-4171-B1D9-79C0E467EBC9}|SignalRApp\\SignalRApp.csproj|solutionrelative:signalrapp\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC826EB2-F3FE-4171-B1D9-79C0E467EBC9}|SignalRApp\\SignalRApp.csproj|d:\\pigeongram\\pigeongram\\wcf_chat\\signalrapp\\signalrapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EC826EB2-F3FE-4171-B1D9-79C0E467EBC9}|SignalRApp\\SignalRApp.csproj|solutionrelative:signalrapp\\signalrapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\models\\chatconversation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\models\\chatconversation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\databasedataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{E792FD91-C82E-424E-9C72-8685928F6392}|app_interface\\app_interface.csproj|solutionrelative:app_interface\\databasedataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 908,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ViewModel.cs",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\ViewModels\\ViewModel.cs",
+              "RelativeDocumentMoniker": "app_interface\\ViewModels\\ViewModel.cs",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\ViewModels\\ViewModel.cs",
+              "RelativeToolTip": "app_interface\\ViewModels\\ViewModel.cs",
+              "ViewState": "AQIAAFoGAAAAAAAAAAAAAFoGAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T12:03:10.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\SignalRApp\\Program.cs",
+              "RelativeDocumentMoniker": "SignalRApp\\Program.cs",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\SignalRApp\\Program.cs",
+              "RelativeToolTip": "SignalRApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T13:21:46.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SignalRApp.csproj",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\SignalRApp\\SignalRApp.csproj",
+              "RelativeDocumentMoniker": "SignalRApp\\SignalRApp.csproj",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\SignalRApp\\SignalRApp.csproj",
+              "RelativeToolTip": "SignalRApp\\SignalRApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-12T13:08:16.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\SignalRApp\\ChatHub.cs",
+              "RelativeDocumentMoniker": "SignalRApp\\ChatHub.cs",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\SignalRApp\\ChatHub.cs",
+              "RelativeToolTip": "SignalRApp\\ChatHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T13:21:44.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DatabaseDataSet1.xsd",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\DatabaseDataSet1.xsd",
+              "RelativeDocumentMoniker": "app_interface\\DatabaseDataSet1.xsd",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\DatabaseDataSet1.xsd",
+              "RelativeToolTip": "app_interface\\DatabaseDataSet1.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-03-19T12:38:25.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatList.xaml",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\ChatList.xaml",
+              "RelativeDocumentMoniker": "app_interface\\CustomControls\\ChatList.xaml",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\ChatList.xaml",
+              "RelativeToolTip": "app_interface\\CustomControls\\ChatList.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T12:05:36.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MoreOptionsPopup.xaml",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\MoreOptionsPopup.xaml",
+              "RelativeDocumentMoniker": "app_interface\\CustomControls\\MoreOptionsPopup.xaml",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\MoreOptionsPopup.xaml",
+              "RelativeToolTip": "app_interface\\CustomControls\\MoreOptionsPopup.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T12:24:05.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contactinfo.xaml",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\Contactinfo.xaml",
+              "RelativeDocumentMoniker": "app_interface\\CustomControls\\Contactinfo.xaml",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\Contactinfo.xaml",
+              "RelativeToolTip": "app_interface\\CustomControls\\Contactinfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T12:24:00.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AttachFilePopupMenu.xaml",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\AttachFilePopupMenu.xaml",
+              "RelativeDocumentMoniker": "app_interface\\CustomControls\\AttachFilePopupMenu.xaml",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\AttachFilePopupMenu.xaml",
+              "RelativeToolTip": "app_interface\\CustomControls\\AttachFilePopupMenu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T12:23:56.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Conversation.xaml",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\Conversation.xaml",
+              "RelativeDocumentMoniker": "app_interface\\CustomControls\\Conversation.xaml",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\Conversation.xaml",
+              "RelativeToolTip": "app_interface\\CustomControls\\Conversation.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-05T12:17:37.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "app_interface\\MainWindow.xaml",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\MainWindow.xaml",
+              "RelativeToolTip": "app_interface\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-06T11:32:24.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StatusThumbs.xaml",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\StatusThumbs.xaml",
+              "RelativeDocumentMoniker": "app_interface\\CustomControls\\StatusThumbs.xaml",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\StatusThumbs.xaml",
+              "RelativeToolTip": "app_interface\\CustomControls\\StatusThumbs.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T12:24:07.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChatConversation.cs",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\Models\\ChatConversation.cs",
+              "RelativeDocumentMoniker": "app_interface\\Models\\ChatConversation.cs",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\Models\\ChatConversation.cs",
+              "RelativeToolTip": "app_interface\\Models\\ChatConversation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T10:09:26.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatListData.cs",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\Models\\ChatListData.cs",
+              "RelativeDocumentMoniker": "app_interface\\Models\\ChatListData.cs",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\Models\\ChatListData.cs",
+              "RelativeToolTip": "app_interface\\Models\\ChatListData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T12:17:37.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Conversation.xaml.cs",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\Conversation.xaml.cs",
+              "RelativeDocumentMoniker": "app_interface\\CustomControls\\Conversation.xaml.cs",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\CustomControls\\Conversation.xaml.cs",
+              "RelativeToolTip": "app_interface\\CustomControls\\Conversation.xaml.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAABgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T11:12:16.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "app_interface\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\MainWindow.xaml.cs",
+              "RelativeToolTip": "app_interface\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T11:37:43.131Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -30,7 +30,7 @@
 			</Style.Triggers>
 			</Style>
 		<DataTemplate x:Key="ItemTemplate">
-			<Button>
+            <Button >
 				<Button.Style>
 					<Style TargetType="{x:Type Button}">
 						<Setter Property="SnapsToDevicePixels" Value="True"/>
@@ -101,6 +101,7 @@
 
 											<!--Message text -->
 											<DockPanel
+                                                
 											MaxHeight="700">
 												<TextBlock
 													Style="{StaticResource MessageTextStyle}"/>
@@ -230,22 +231,29 @@
             Background="WhiteSmoke"
             HorizontalScrollBarVisibility="Disabled"
             local:ScrollViewerAttachedProperty.AutoScroll="True"
-            Grid.Row="1">
+            Grid.Row="1"
+			>
             <ItemsControl
+                
                 ItemsSource="{Binding FilteredConversations, 
                 UpdateSourceTrigger=PropertyChanged}"
 				ItemTemplate="{StaticResource ItemTemplate}"
                 Margin="15,0,0,0"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                <!--animation om msg item add-->
+                <StackPanel>
+                    <ListBox x:Name="chatbox"/>
+                </StackPanel>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel>
+                            
                             <b:Interaction.Behaviors>
+                                
                                 <b:FluidMoveBehavior AppliesTo="Children" Duration="00:00:00.25"/>
                             </b:Interaction.Behaviors>
                         </StackPanel>
-                    </ItemsPanelTemplate>
+                    </ItemsPanelTemplate>	
                 </ItemsControl.ItemsPanel>
             
             </ItemsControl>

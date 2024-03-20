@@ -389,7 +389,9 @@
 
                     <StackPanel 
                             Orientation="Horizontal">
-
+                        <Path>
+                            <!--для красоты-->
+                        </Path>
                         <Path 
                              Fill="Black"
                              Data="{StaticResource pinned}"
@@ -406,13 +408,16 @@
                              ItemsSource="{Binding FilteredPinnedChats}"
                              ItemTemplate="{StaticResource ChatButtonItemTemplate}"
                             ItemsPanel="{StaticResource dtitemPanel}"
-                             Padding="0,15">
+                             Padding="0,15" Width="365">
                     </ItemsControl>
                 </StackPanel>
                 <StackPanel Grid.Row="1">
                     <!--all chats-->
                     <StackPanel 
                              Orientation="Horizontal">
+                        <Path>
+                            <!--для красоты-->
+                        </Path>
                         <Path 
                              Fill="Black"
                              Data="{StaticResource allchats}" Height="14" Stretch="Fill" Width="14"/>
@@ -430,7 +435,7 @@
                          ItemsSource="{Binding FilteredChats}"
                          ItemTemplate="{StaticResource ChatButtonItemTemplate}"
                          ItemsPanel="{StaticResource dtitemPanel}"
-                         Padding="0,15"  >
+                         Padding="0,20" Width="370"  >
 
                     </ItemsControl>
 

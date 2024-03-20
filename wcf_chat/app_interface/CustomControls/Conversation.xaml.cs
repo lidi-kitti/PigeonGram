@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.SignalR.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,35 @@ namespace app_interface.CustomControls
     /// </summary>
     public partial class Conversation : UserControl
     {
+        //HubConnection hubConnection;
         public Conversation()
         {
             InitializeComponent();
+   //         hubConnection = new HubConnectionBuilder().WithUrl("https://localhost:7098/chat")
+   //.Build();
+   //         hubConnection.On<string, string>("ReceivedMessage", (user, message) =>
+   //         {
+   //             Dispatcher.Invoke(() =>
+   //             {
+   //                 var newMessage = $"{user}: {message}";
+   //                 chatbox.Items.Insert(0, newMessage);
+   //             });
+   //         });
         }
+        // обработчик загрузки окна
+        //private async void Window_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        // подключемся к хабу
+        //        await hubConnection.StartAsync();
+        //        chatbox.Items.Add("Вы вошли в чат");
+        //        sendBtn.IsEnabled = true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        chatbox.Items.Add(ex.Message);
+        //    }
+        //}
     }
 }
