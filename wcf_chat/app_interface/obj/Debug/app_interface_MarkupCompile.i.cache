@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\obj\Debug\
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\app_interface\obj\Debug\
 app_interface
 none
 false
 DEBUG;TRACE
-C:\Users\samsung\source\repos\PigeonGram\wcf_chat\app_interface\App.xaml
-9-393505297
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\app_interface\App.xaml
+11-70017836
 
-20171494303
-14417309459
-Assets\icons.xaml;CustomControls\AttachFilePopupMenu.xaml;CustomControls\ChatList.xaml;CustomControls\Contactinfo.xaml;CustomControls\Conversation.xaml;CustomControls\MoreOptionsPopup.xaml;CustomControls\StatusThumbs.xaml;icons.xaml;MainWindow.xaml;
+24-1329475547
+20489290895
+Assets\icons.xaml;CustomControls\AttachFilePopupMenu.xaml;CustomControls\ChatList.xaml;CustomControls\Contactinfo.xaml;CustomControls\Conversation.xaml;CustomControls\MoreOptionsPopup.xaml;CustomControls\StatusThumbs.xaml;icons.xaml;LoginWindow.xaml;MainWindow.xaml;RegWindow.xaml;
 
 False
 

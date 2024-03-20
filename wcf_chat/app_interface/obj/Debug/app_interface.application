@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="app_interface.exe.manifest" size="4371">
+    <dependentAssembly dependencyType="install" codebase="app_interface.exe.manifest" size="5766">
       <assemblyIdentity name="app_interface.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/bLVLZKDDpdxd/0JFEDaERnaMpvP1Mv2zIXN/uIHFjo=</dsig:DigestValue>
+        <dsig:DigestValue>BYuxyQ57KaIGXVjYR2GCD3VtmLkRgCbO19bOVNgcbIc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

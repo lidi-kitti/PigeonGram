@@ -1,6 +1,7 @@
 ﻿using app_interface.Commands;
 using app_interface.CustomControls;
 using app_interface.Models;
+using login_registration;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -880,8 +881,8 @@ namespace app_interface.ViewModels
         }
         public void SendMessage()
         {
-           //send message only when the textbox is not empty
-            if(!string.IsNullOrEmpty(MessageText))
+            DataBase dataBase = new DataBase();
+            if (!string.IsNullOrEmpty(MessageText))
             {
                 var conversation = new ChatConversation()
                 {
@@ -1123,11 +1124,5 @@ namespace app_interface.ViewModels
         {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
         }
-
-       
-
-
-
-
     }
 }
