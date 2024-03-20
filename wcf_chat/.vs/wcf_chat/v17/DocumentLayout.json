@@ -74,20 +74,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 908,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ViewModel.cs",
               "DocumentMoniker": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\ViewModels\\ViewModel.cs",
               "RelativeDocumentMoniker": "app_interface\\ViewModels\\ViewModel.cs",
-              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\ViewModels\\ViewModel.cs",
-              "RelativeToolTip": "app_interface\\ViewModels\\ViewModel.cs",
-              "ViewState": "AQIAAFoGAAAAAAAAAAAAAFoGAAA7AAAA",
+              "ToolTip": "D:\\pigeongram\\PigeonGram\\wcf_chat\\app_interface\\ViewModels\\ViewModel.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "RelativeToolTip": "app_interface\\ViewModels\\ViewModel.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AQIAAHoEAAAAAAAAAAAkwNYIAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T12:03:10.653Z",
-              "EditorCaption": ""
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
             },
             {
               "$type": "Document",
@@ -99,8 +107,7 @@
               "RelativeToolTip": "SignalRApp\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T13:21:46.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T13:21:46.432Z"
             },
             {
               "$type": "Document",
@@ -112,8 +119,7 @@
               "RelativeToolTip": "SignalRApp\\SignalRApp.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-12T13:08:16.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T13:08:16.625Z"
             },
             {
               "$type": "Document",
@@ -125,8 +131,7 @@
               "RelativeToolTip": "SignalRApp\\ChatHub.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T13:21:44.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T13:21:44.111Z"
             },
             {
               "$type": "Bookmark",
