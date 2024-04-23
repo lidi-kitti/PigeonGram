@@ -175,3 +175,312 @@ D:\pigeongram\PigeonGram\wcf_chat\app_interface\bin\Debug\System.Text.Json.xml
 D:\pigeongram\PigeonGram\wcf_chat\app_interface\bin\Debug\System.Threading.Channels.xml
 D:\pigeongram\PigeonGram\wcf_chat\app_interface\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\pigeongram\PigeonGram\wcf_chat\app_interface\bin\Debug\System.ValueTuple.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\app_interface.exe.config
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\app_interface.exe.manifest
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\app_interface.application
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\app_interface.exe
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\app_interface.pdb
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\MaterialDesignColors.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Features.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Buffers.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.IO.Pipelines.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Memory.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Text.Json.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Threading.Channels.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.ValueTuple.dll
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\MaterialDesignColors.pdb
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Client.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Common.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.Core.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Common.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Protocols.Json.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Features.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Buffers.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.IO.Pipelines.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Memory.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Text.Json.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Threading.Channels.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\bin\Debug\System.ValueTuple.xml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.csproj.AssemblyReference.cache
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.csproj.SuggestedBindingRedirects.cache
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\Assets\icons.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\icons.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\ChatList.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\StatusThumbs.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\LoginWindow.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\MainWindow.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\RegWindow.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\App.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface_MarkupCompile.cache
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface_MarkupCompile.lref
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\App.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\ChatList.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\CustomControls\StatusThumbs.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\LoginWindow.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\MainWindow.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\RegWindow.baml
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.g.resources
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.Properties.Resources.resources
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.csproj.GenerateResource.cache
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.csproj.CoreCompileInputs.cache
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.exe.manifest
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.application
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.csproj.CopyComplete
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.exe
+C:\Users\samsung\Desktop\диплом\wcf_chat\app_interface\obj\Debug\app_interface.pdb
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\app_interface.exe.config
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\app_interface.exe.manifest
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\app_interface.application
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\app_interface.exe
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\app_interface.pdb
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\MaterialDesignColors.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Features.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Buffers.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.IO.Pipelines.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Memory.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Text.Json.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Threading.Channels.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.ValueTuple.dll
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\MaterialDesignColors.pdb
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Client.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Common.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.Core.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Common.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Protocols.Json.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Features.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Buffers.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.IO.Pipelines.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Memory.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Text.Json.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Threading.Channels.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\bin\Debug\System.ValueTuple.xml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.csproj.AssemblyReference.cache
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.csproj.SuggestedBindingRedirects.cache
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\Assets\icons.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\icons.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\ChatList.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\StatusThumbs.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\LoginWindow.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\MainWindow.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\RegWindow.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\App.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface_MarkupCompile.cache
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface_MarkupCompile.lref
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\App.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\ChatList.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\CustomControls\StatusThumbs.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\LoginWindow.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\MainWindow.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\RegWindow.baml
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.g.resources
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.Properties.Resources.resources
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.csproj.GenerateResource.cache
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.csproj.CoreCompileInputs.cache
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.exe.manifest
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.application
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.csproj.CopyComplete
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.exe
+C:\Users\samsung\Desktop\диплом — копия (2)\wcf_chat\app_interface\obj\Debug\app_interface.pdb
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\app_interface.exe.config
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\app_interface.exe.manifest
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\app_interface.application
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\app_interface.exe
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\app_interface.pdb
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\MaterialDesignColors.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Features.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Buffers.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.IO.Pipelines.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Memory.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Text.Json.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Threading.Channels.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.ValueTuple.dll
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\MaterialDesignColors.pdb
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Client.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.Http.Connections.Common.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Client.Core.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Common.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.AspNetCore.SignalR.Protocols.Json.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Features.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Buffers.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.IO.Pipelines.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Memory.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Text.Json.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Threading.Channels.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\bin\Debug\System.ValueTuple.xml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.csproj.AssemblyReference.cache
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.csproj.SuggestedBindingRedirects.cache
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\Assets\icons.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\icons.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\ChatList.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\StatusThumbs.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\LoginWindow.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\MainWindow.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\RegWindow.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\App.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface_MarkupCompile.cache
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface_MarkupCompile.lref
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\App.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\AttachFilePopupMenu.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\ChatList.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\Contactinfo.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\Conversation.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\MoreOptionsPopup.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\CustomControls\StatusThumbs.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\LoginWindow.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\MainWindow.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\RegWindow.baml
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.g.resources
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.Properties.Resources.resources
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.csproj.GenerateResource.cache
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.csproj.CoreCompileInputs.cache
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.exe.manifest
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.application
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.csproj.CopyComplete
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.exe
+C:\Users\samsung\Desktop\диплом работаем пока в этой папке\wcf_chat\app_interface\obj\Debug\app_interface.pdb

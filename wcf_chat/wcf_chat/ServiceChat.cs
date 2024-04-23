@@ -5,55 +5,42 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
-
 namespace wcf_chat
 {
-
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+    [ServiceBehavior(InstanceContextMode =InstanceContextMode.Single)]
     public class ServiceChat : IServiceChat
     {
         List<ServerUser> users = new List<ServerUser>();
-        int nextId = 1;
-
-        public int Connect(string name)
+        public void SendMsg(string UserFrom, string UserTo, string MessageData)
         {
+            //foreach (var item  in users) 
+            //{
+            //    if (item.Equals(UserTo)) 
+            //    {
+            //        string message = DateTime.Now.ToShortTimeString();
+            //        var user = users.FirstOrDefault(i => i.Login == UserFrom);
+            //        if (user != null)
+            //        {
+            //            message += ": " + user.Login + " ";
+            //        }
+            //        message += MessageData;
+            //        item.operationContext.GetCallbackChannel<IServerChatCallback>().MsgCallback(message);
+            //    }
+                
+            //}
 
-            ServerUser user = new ServerUser()
+
+            if (users.FirstOrDefault(u => u.Login == UserTo)!=null)
             {
-                ID = nextId,
-                Name = name,
-                operationContext = OperationContext.Current
-            };
-            nextId++;
-
-            SendMsg(": " + user.Name + " was added", 0);
-            users.Add(user);
-            return user.ID;
-        }
-
-        public void Disconnect(int id)
-        {
-            var user = users.FirstOrDefault(i => i.ID == id);
-            if (user != null)
-            {
-                users.Remove(user);
-                SendMsg(": " + user.Name + " left", 0);
-            }
-        }
-
-        public void SendMsg(string msg, int id)
-        {
-            foreach (var item in users)
-            {
-                string answer = DateTime.Now.ToShortTimeString();
-
-                var user = users.FirstOrDefault(i => i.ID == id);
-                if (user != null)
+                // отправка юзеру
+                if (users.FirstOrDefault(u=>u.Login == UserTo).operationContext!=null)
                 {
-                    answer += ": " + user.Name + " ";
+                    users.FirstOrDefault(u => u.Login == UserTo).operationContext.GetCallbackChannel<IServerChatCallback>()
+                        .MsgCallback($"{DateTime.Now.ToShortTimeString()} | {users.FirstOrDefault(u => u.Login == UserFrom).Login}: {MessageData}");
                 }
-                answer += msg;
-                item.operationContext.GetCallbackChannel<IServerChatCallback>().MsgCallback(answer);
+                //отпечатка у отправителя
+                users.FirstOrDefault(u => u.Login == UserFrom).operationContext.GetCallbackChannel<IServerChatCallback>()
+                    .MsgCallback($"{DateTime.Now.ToShortTimeString()} | me: {MessageData}");
             }
         }
     }
