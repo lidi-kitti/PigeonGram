@@ -19,6 +19,7 @@ using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using app_interface.ServiceReference1;
 using System.ServiceModel;
+using System.Windows.Interop;
 
 namespace app_interface
 {
@@ -27,7 +28,7 @@ namespace app_interface
     /// </summary>
     /// 
 
-    public partial class MainWindow : Window, ServiceReference1.IServiceChatCallback
+    public partial class MainWindow : Window, IServiceChatCallback
     {
 
         ServiceReference1.ServiceChatClient client;
@@ -45,6 +46,8 @@ namespace app_interface
         public MainWindow()
         {
             InitializeComponent();
+
+            client = new ServiceChatClient(new InstanceContext(this));
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -115,8 +118,7 @@ namespace app_interface
                 mainWinGrid.Visibility = Visibility.Visible;
 
                 string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
-                string query = $"SELECT Login FROM Users where ID_User = (select ID_Added_User from Chats)";
-
+                string query = $"SELECT Login FROM Users";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -128,20 +130,18 @@ namespace app_interface
                             while (reader.Read())
                             {
                                 string value = reader["Login"].ToString();
-                                //if (value != login)
-                                //{
-                                    usersListBox.Items.Add(value);
-                                //}
+                                usersListBox.Items.Add(value);
                             }
                         }
                     }
                 }
+
             }
-            else
-            {
-                MessageBox.Show("Такого аккаунта не существует.");
-            }
-            client = new ServiceChatClient(new System.ServiceModel.InstanceContext(this));
+            //else
+            //{
+            //    MessageBox.Show("Такого аккаунта не существует.");
+            //}
+            client = new ServiceChatClient(new InstanceContext(this));
         }
 
         // регистрация
@@ -221,12 +221,12 @@ namespace app_interface
             }
         }
 
-        private void addNewContact_Click(object sender, RoutedEventArgs e)
-        {
-            addNewContactGrid.Visibility = Visibility.Visible;
-            mainWinGrid.Visibility = Visibility.Hidden;
-            mainWinBorder.Visibility = Visibility.Hidden;
-        }
+        //private void addNewContact_Click(object sender, RoutedEventArgs e)
+        //{
+        //    addNewContactGrid.Visibility = Visibility.Visible;
+        //    mainWinGrid.Visibility = Visibility.Hidden;
+        //    mainWinBorder.Visibility = Visibility.Hidden;
+        //}
 
         private void backToMainWinBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -235,67 +235,67 @@ namespace app_interface
             mainWinBorder.Visibility = Visibility.Visible;
         }
 
-        private void findNewContactBtn_Click(object sender, RoutedEventArgs e)
-        {
-            DataBase dataBase = new DataBase();
+        //private void findNewContactBtn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    DataBase dataBase = new DataBase();
 
-            string mainLog = emailLogBox.Text;
-            string login = addNewContactTB.Text.Trim();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
+        //    string mainLog = emailLogBox.Text;
+        //    string login = addNewContactTB.Text.Trim();
+        //    SqlDataAdapter adapter = new SqlDataAdapter();
+        //    DataTable table = new DataTable();
 
-            string querystring = $"select Login from Users where Login = '{login}'";
+        //    string querystring = $"select Login from Users where Login = '{login}'";
 
-            SqlCommand command = new SqlCommand(querystring, database.getConnection());
+        //    SqlCommand command = new SqlCommand(querystring, database.getConnection());
 
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
+        //    adapter.SelectCommand = command;
+        //    adapter.Fill(table);
 
-            if (mainLog != login)
-            {
-                if (table.Rows.Count == 1)
-                {
-                    addNewContactGrid.Visibility = Visibility.Hidden;
-                    mainWinGrid.Visibility = Visibility.Visible;
-                    mainWinBorder.Visibility = Visibility.Visible;
-                    string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+        //    if (mainLog != login)
+        //    {
+        //        if (table.Rows.Count == 1)
+        //        {
+        //            addNewContactGrid.Visibility = Visibility.Hidden;
+        //            mainWinGrid.Visibility = Visibility.Visible;
+        //            mainWinBorder.Visibility = Visibility.Visible;
+        //            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
 
-                    string query = $"SELECT Login FROM Users where Login = '{login}'";
+        //            string query = $"SELECT Login FROM Users where Login = '{login}'";
 
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
+        //            using (SqlConnection connection = new SqlConnection(connectionString))
+        //            {
+        //                connection.Open();
 
-                        using (SqlCommand command2 = new SqlCommand(query, connection))
-                        {
-                            using (SqlDataReader reader = command2.ExecuteReader())
-                            {
-                                while (reader.Read())
-                                {
-                                    string value = reader["Login"].ToString();
-                                    usersListBox.Items.Add(value);
-                                }
-                            }
-                        }
-                    }
-                    string querystring1 = $"insert into Chats (ID_Logged_User, ID_Added_User) values ((select ID_User from Users where Login = '{mainLog}'), (select ID_User from Users where Login = '{login}'))";
-                    SqlCommand command4 = new SqlCommand(querystring1, dataBase.getConnection());
+        //                using (SqlCommand command2 = new SqlCommand(query, connection))
+        //                {
+        //                    using (SqlDataReader reader = command2.ExecuteReader())
+        //                    {
+        //                        while (reader.Read())
+        //                        {
+        //                            string value = reader["Login"].ToString();
+        //                            usersListBox.Items.Add(value);
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //            string querystring1 = $"insert into Chats (ID_Logged_User, ID_Added_User) values ((select ID_User from Users where Login = '{mainLog}'), (select ID_User from Users where Login = '{login}'))";
+        //            SqlCommand command4 = new SqlCommand(querystring1, dataBase.getConnection());
 
-                    dataBase.openConnection();
+        //            dataBase.openConnection();
 
-                    command4.ExecuteNonQuery();
+        //            command4.ExecuteNonQuery();
 
-                }
-            }
-            else if (mainLog == login)
-            {
-                MessageBox.Show("Себя добавить нельзя");
-            }
-             else
-            {
-                MessageBox.Show("Такого пользователя нет");
-            }
-        }
+        //        }
+        //    }
+        //    else if (mainLog == login)
+        //    {
+        //        MessageBox.Show("Себя добавить нельзя");
+        //    }
+        //     else
+        //    {
+        //        MessageBox.Show("Такого пользователя нет");
+        //    }
+        //}
 
         private void usersListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -332,10 +332,17 @@ namespace app_interface
             //        });
             //    }
             //}
-            if (usersListBox.SelectedItem != null) 
+            if (usersListBox.SelectedItem != null && usersListBox.SelectedItems.Count>0)
             {
-                client.SendMsg(logRegBox.Text, usersListBox.SelectedItem.ToString(), MessageTB.Text.ToString());
-                MessageTB.Text = string.Empty;
+                string reciver = usersListBox.SelectedItem.ToString();
+                string login = emailLogBox.Text;
+                foreach (var selectedUser in usersListBox.SelectedItems)
+                {
+                    string selectedChat = selectedUser.ToString();
+                    string message = MessageTB.Text;
+                    client.SendMsg(login, selectedChat, message);
+                    MessageTB.Text = string.Empty;
+                }
             }
         }
     }

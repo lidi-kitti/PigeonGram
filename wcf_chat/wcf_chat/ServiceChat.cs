@@ -41,6 +41,7 @@ namespace wcf_chat
                 //отпечатка у отправителя
                 users.FirstOrDefault(u => u.Login == UserFrom).operationContext.GetCallbackChannel<IServerChatCallback>()
                     .MsgCallback($"{DateTime.Now.ToShortTimeString()} | me: {MessageData}");
+
             }
         }
     }

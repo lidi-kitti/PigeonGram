@@ -226,7 +226,7 @@
                         Grid.Column="1"
                         x:Name="addNewContact"
                         Content="Добавить контакт" Margin="68,22,16,21"
-                            Click="addNewContact_Click"/>
+                            />
 
                     </Grid>
                     <!--#region SearchBox-->
@@ -306,7 +306,7 @@
                      />-->
 
 
-                <ListBox Background="Red" Visibility="Hidden"
+                <ListBox Background="Transparent" Visibility="Hidden"
                          x:Name="messageTest" Grid.ColumnSpan="2" Margin="403,73,3,113" Grid.Row="1"/>
 
                 <!--красивая панелька-->
@@ -666,7 +666,7 @@ ElementName=ConversationMoreOptions}" Value="True">
                     </Grid>
                     <Grid Margin="0 0 0 20"/>
                     <TextBox x:Name="addNewContactTB" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                    <Button x:Name="findNewContactBtn" Content="Найти" Margin="0 20" Background="DarkSlateBlue" Click="findNewContactBtn_Click" Cursor="Hand"></Button>
+                    <Button x:Name="findNewContactBtn" Content="Найти" Margin="0 20" Background="DarkSlateBlue" Cursor="Hand"></Button>
                 </StackPanel>
             </Border>
 
