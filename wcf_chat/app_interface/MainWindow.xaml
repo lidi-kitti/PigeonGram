@@ -73,6 +73,8 @@
     </Window.Resources>
 
     <Grid>
+
+
         <!--окно авторизации-->
         <Grid x:Name="logWinGrid" Visibility="Visible">
             <Border MinWidth="400" Margin="15" Background="PowderBlue" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
@@ -224,9 +226,9 @@
                         <Button 
                         Background="DarkSlateBlue"
                         Grid.Column="1"
-                        x:Name="addNewContact"
-                        Content="Добавить контакт" Margin="68,22,16,21"
-                            />
+                        x:Name="myProfileInfo"
+                        Content="Мой профиль" Margin="68,22,16,21"
+                            Click="myProfileInfo_Click"/>
 
                     </Grid>
                     <!--#region SearchBox-->
@@ -284,7 +286,7 @@
                     <!--#region Chats List-->
                     <!--<customcontrols:ChatList Grid.Row="3"/>-->
                     <!--  Окно пользователей  -->
-                    <ListBox Background="Purple"
+                    <ListBox Background="Transparent"
                     x:Name="usersListBox"
                     SelectedItem="{Binding SelectedParticipant}"                     
                     Grid.Row="3" 
@@ -654,22 +656,36 @@ ElementName=ConversationMoreOptions}" Value="True">
 
             </Grid>
         </Border>
-        <Grid x:Name="addNewContactGrid" Visibility="Hidden">
-            <Border MinWidth="400" Margin="15" Background="PowderBlue" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+
+        <!--для изменения профиля-->
+        <Grid x:Name="myRrofileInfoGrid" Visibility="Hidden" VerticalAlignment="Center">
+            <Border MinWidth="400" Margin="425,-17,425,0" Background="PowderBlue" VerticalAlignment="Top" Padding="30" MaxWidth="550" CornerRadius="20" Height="501">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
                 </Border.Effect>
                 <StackPanel>
-                    <TextBlock Text="Добавить контакт" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                    <TextBlock Text="Мой профиль" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
                     <Grid Margin="0 0 0 20">
                         <Button x:Name="backToMainWinBtn" HorizontalAlignment="Left" Content="Назад" Click="backToMainWinBtn_Click" Style="{StaticResource MaterialDesignFlatButton}"></Button>
                     </Grid>
-                    <Grid Margin="0 0 0 20"/>
-                    <TextBox x:Name="addNewContactTB" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                    <Button x:Name="findNewContactBtn" Content="Найти" Margin="0 20" Background="DarkSlateBlue" Cursor="Hand"></Button>
+                    <Grid>
+                        <Image x:Name="pictureSet" Margin="75,12,77,19"/>
+                        <!--<materialDesign:PackIcon x:Name="pictureSet" Kind="AccountCircle" Width="340" Height="130"/>-->
+                        <Button x:Name="newPhoto" Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                        BorderBrush="DarkSlateBlue"
+                        Click="newPhoto_Click"
+                        ToolTip="Click to select picture" Margin="231,81,69,9">
+                            <materialDesign:PackIcon Kind="FileImage" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
+                    </Grid>
+
                 </StackPanel>
             </Border>
-
+            <TextBox HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <Button x:Name="changeProfileBtn" Content="Сохранить изменения" Background="DarkSlateBlue" HorizontalAlignment="Center" Margin="0,429,0,0" VerticalAlignment="Top" Click="changeProfileBtn_Click"/>
         </Grid>
     </Grid>
 </Window>

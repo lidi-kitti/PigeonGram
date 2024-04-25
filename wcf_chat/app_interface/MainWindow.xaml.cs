@@ -20,6 +20,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using app_interface.ServiceReference1;
 using System.ServiceModel;
 using System.Windows.Interop;
+using Microsoft.Win32;
+using System.IO;
 
 namespace app_interface
 {
@@ -185,6 +187,10 @@ namespace app_interface
             }
             else
             {
+
+                string path = "C:\\Users\\samsung\\Pictures\\user with no photo.png";
+                byte[] imageBytes = File.ReadAllBytes(path);
+
                 fisrtNameRegBox.ToolTip = "";
                 fisrtNameRegBox.Background = Brushes.Transparent;
 
@@ -203,30 +209,41 @@ namespace app_interface
                 string hashedPass;
                 hashedPass = MyHash.HashPassword(password);
 
-                string querystring = $"insert into Users (First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank, Is_Logged) values ('{firstName}', '{lastName}', '{email}', '{login}', '{hashedPass}', '2', '0')";
-                SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
+                string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
 
-                dataBase.openConnection();
-
-                if (command.ExecuteNonQuery() == 1)
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                   MessageBox.Show("Регистрация успешна. Пожалуйста, войдите в аккаунт для продолжения работы.");
-                   regWinGrid.Visibility = Visibility.Hidden;
-                   logWinGrid.Visibility = Visibility.Visible;
-                }
+                    connection.Open();
 
-                else
-                {
-                    MessageBox.Show("Аккаунт не создан");
-                }
+                    string querystring = $"INSERT INTO Users (First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank, Is_Logged, User_Photo) " +
+                                         $"VALUES ('{firstName}', '{lastName}', '{email}', '{login}', '{hashedPass}', '2', '0', @UserPhoto)";
 
-                dataBase.closeConnection();
+                    using (SqlCommand command = new SqlCommand(querystring, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserPhoto", imageBytes);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected == 1)
+                        {
+                            MessageBox.Show("Регистрация успешна. Пожалуйста, войдите в аккаунт для продолжения работы.");
+                            logWinGrid.Visibility = Visibility.Visible;
+                            regWinGrid.Visibility = Visibility.Hidden;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Аккаунт не создан");
+                        }
+                    }
+                }
             }
+           
         }
+           
 
         private void backToMainWinBtn_Click(object sender, RoutedEventArgs e)
         {
-            addNewContactGrid.Visibility = Visibility.Hidden;
+            myRrofileInfoGrid.Visibility = Visibility.Hidden;
             mainWinGrid.Visibility = Visibility.Visible;
             mainWinBorder.Visibility = Visibility.Visible;
         }
@@ -259,6 +276,94 @@ namespace app_interface
                     string message = MessageTB.Text;
                     client.SendMsg(login, selectedChat, message);
                     MessageTB.Text = string.Empty;
+                }
+            }
+        }
+
+        private void myProfileInfo_Click(object sender, RoutedEventArgs e)
+        {
+            myRrofileInfoGrid.Visibility = Visibility.Visible;
+            mainWinGrid.Visibility = Visibility.Hidden;
+            mainWinBorder.Visibility = Visibility.Hidden;
+            string login = emailLogBox.Text;
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string querystring = $"SELECT User_Photo FROM Users where Login = '{login}'";
+
+                using (SqlCommand command = new SqlCommand(querystring, connection))
+                {
+                    command.Parameters.AddWithValue("@Login", login);
+
+                    byte[] imageBytes = (byte[])command.ExecuteScalar();
+
+                    if (imageBytes != null)
+                    {
+                        BitmapImage bitmapImage = new BitmapImage();
+                        bitmapImage.BeginInit();
+                        bitmapImage.StreamSource = new MemoryStream(imageBytes);
+                        bitmapImage.EndInit();
+
+                        pictureSet.Source = bitmapImage;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Изображение не найдено.");
+                    }
+                }
+            }
+
+        }
+
+        string picAddress = "";
+        private void newPhoto_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            if ((bool)openFile.ShowDialog())
+            {
+                picAddress = openFile.FileName;
+                pictureSet.Source =
+                    new BitmapImage(new Uri(openFile.FileName, UriKind.Absolute)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache }; ;
+            }
+        }
+
+        private void changeProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string login = emailLogBox.Text;
+            BitmapImage bitmapImage = (BitmapImage)pictureSet.Source;
+
+            byte[] imageBytes;
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
+                encoder.Save(memoryStream);
+                imageBytes = memoryStream.ToArray();
+            }
+
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+            string query = "UPDATE Users SET User_Photo = @User_Photo WHERE Login = @Login";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add("@User_Photo", SqlDbType.VarBinary, -1).Value = imageBytes;
+                    command.Parameters.Add("@Login", SqlDbType.VarChar).Value = login;
+
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Изображение успешно обновлено в базе данных.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Произошла ошибка при обновлении изображения в базе данных: " + ex.Message);
+                    }
                 }
             }
         }
