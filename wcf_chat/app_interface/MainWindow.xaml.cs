@@ -50,9 +50,60 @@ namespace app_interface
             InitializeComponent();
 
             client = new ServiceChatClient(new InstanceContext(this));
+
+            //fill_Users();
+            fiil_table();
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        //void fill_Users()
+        //{
+        //    string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+        //    SqlConnection connection = new SqlConnection(connectionString);
+
+        //    // Напишите SQL-запрос для извлечения значений
+        //    string query = "select Login from Users";
+
+        //    // Создаем объект DataAdapter для выполнения запроса
+        //    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+        //    DataSet dataSet = new DataSet();
+
+        //    // Заполняем набор данных с помощью DataAdapter
+        //    dataAdapter.Fill(dataSet, "Login");
+
+        //    // Создаем объект DataTable, куда будем загружать данные
+        //    DataTable dt = dataSet.Tables["Login"];
+
+        //    // Привязываем данные к свойству ItemsSource вашего ComboBox
+        //    usersBox.ItemsSource = dt.DefaultView;
+        //    usersBox.DisplayMemberPath = "Login";
+        //}
+
+        void fiil_table()
+        {
+            // Строка подключения к базе данных
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+            // Создание соединения с базой данных
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Создание и выполнение SQL-запроса
+                string query = "select ID_User, First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank from Users";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Создание DataTable и загрузка данных
+                DataTable dataTable = new DataTable();
+                dataTable.Load(reader);
+
+                // Привязка DataTable к DataGrid (предварительно настроив DataGrid в XAML)
+                UserInfoDataGrid.ItemsSource = dataTable.DefaultView;
+            }
+
+        }
+
+
+    private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
@@ -318,6 +369,8 @@ namespace app_interface
 
         }
 
+
+        //открыть диалоговое окно и выбрать картинку
         string picAddress = "";
         private void newPhoto_Click(object sender, RoutedEventArgs e)
         {
@@ -330,6 +383,7 @@ namespace app_interface
             }
         }
 
+        //сохраняет картинку в бд в виде массива байтов
         private void changeProfileBtn_Click(object sender, RoutedEventArgs e)
         {
             string login = emailLogBox.Text;
@@ -358,14 +412,56 @@ namespace app_interface
                     {
                         connection.Open();
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Изображение успешно обновлено в базе данных.");
+                        MessageBox.Show("Изменения успешно сохранены");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Произошла ошибка при обновлении изображения в базе данных: " + ex.Message);
+                        MessageBox.Show("Произошла ошибка при сохранении данных, попробуйте позже.");
                     }
                 }
             }
+        }
+
+        private void UserInfoDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            deleteUserBtn.IsEnabled = true;
+            toDocBtn.IsEnabled = true;
+        }
+
+        private void deleteUserBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы уверены, что хотите удалить запись?", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                int userId;
+                if (UserInfoDataGrid.SelectedItems.Count > 0)
+                {
+                    DataRowView row = (DataRowView)UserInfoDataGrid.SelectedItems[0];
+                    userId = (int)row.Row.ItemArray[0]; // Получаем значение из первой ячейки
+                    string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+                    string query = $"DELETE FROM Users WHERE ID_User={userId}";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.ExecuteNonQuery();
+
+                            MessageBox.Show("Пользователь успешно удален", "Успешное удаление", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                            fiil_table();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void adminWinInfoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            adminInfoGrid.Visibility = Visibility.Visible;
+            mainWinBorder.Visibility = Visibility.Hidden;
+            mainWinGrid.Visibility = Visibility.Hidden;
         }
     }
 }

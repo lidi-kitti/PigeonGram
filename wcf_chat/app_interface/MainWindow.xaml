@@ -191,6 +191,10 @@
                     <Grid 
                     Height="75"
                     Margin="1,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <!--Title-->
                             <ColumnDefinition Width="60"/>
@@ -203,18 +207,18 @@
 
                         </Grid.ColumnDefinitions>
                         <TextBlock
-                        Text="Чаты"
+                        Text="Пользователи"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
+                        VerticalAlignment="Top"
                         FontSize="18"
-                        FontWeight="SemiBold" Margin="21,0,0,0" Grid.ColumnSpan="2"/>
+                        FontWeight="SemiBold" Margin="21,26,0,0" Grid.ColumnSpan="2"/>
                         <!--Search Button-->
                         <Button
                         Grid.Column="2"
                         x:Name="btnChatSeacrhButton"
                         Command="{Binding OpenSearchCommand}"
                         Content="{StaticResource search}"
-                        Style="{StaticResource IconButtonStyle}"
+                        Style="{StaticResource IconButtonStyle}" Grid.ColumnSpan="2" Margin="0,12,30,13" Grid.RowSpan="2"
                         />
                         <!-- More Options Popup Menu-->
                         <ToggleButton 
@@ -222,13 +226,26 @@
                         x:Name="btnMoreOptions"
                         Content="{StaticResource more}"
                         Command="{Binding WindowsMoreOptionsCommand}"
-                        Style="{StaticResource ToggleIconButtonStyle}"/>
+                        Style="{StaticResource ToggleIconButtonStyle}" Margin="5,22,5,8"/>
                         <Button 
-                        Background="DarkSlateBlue"
+                        Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
                         Grid.Column="1"
+                            BorderBrush="DarkSlateBlue"
                         x:Name="myProfileInfo"
-                        Content="Мой профиль" Margin="68,22,16,21"
-                            Click="myProfileInfo_Click"/>
+                        Margin="201,19,13,1"
+                             Click="myProfileInfo_Click" RenderTransformOrigin="-0.04,0.503">
+                            <materialDesign:PackIcon Kind="UserEdit" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
+
+                        <Button 
+                        Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                        Grid.Column="1"
+                            BorderBrush="DarkSlateBlue"
+                        x:Name="adminWinInfoBtn"
+                        Margin="144,19,70,1"
+                            Click="adminWinInfoBtn_Click">
+                            <materialDesign:PackIcon Kind="Info" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
 
                     </Grid>
                     <!--#region SearchBox-->
@@ -686,6 +703,40 @@ ElementName=ConversationMoreOptions}" Value="True">
             <TextBox HorizontalAlignment="Center" Margin="0,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
             <TextBox HorizontalAlignment="Center" Margin="0,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
             <Button x:Name="changeProfileBtn" Content="Сохранить изменения" Background="DarkSlateBlue" HorizontalAlignment="Center" Margin="0,429,0,0" VerticalAlignment="Top" Click="changeProfileBtn_Click"/>
+        </Grid>
+
+        <!--для администраторов (удаление пользователей, выгрузка инфы в документы, регистрация новых пользователей)-->
+        <Grid x:Name="adminInfoGrid" Visibility="Hidden" VerticalAlignment="Center">
+            <Border MinWidth="700" Margin="175,17,165,0" Background="PowderBlue" VerticalAlignment="Top" Padding="30" MaxWidth="550" CornerRadius="20" Height="587">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Администратор" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                    <Grid Margin="0 0 0 20">
+                        <Button x:Name="backToMainFAdminWinBtn" HorizontalAlignment="Left" Content="Назад" Style="{StaticResource MaterialDesignFlatButton}" Foreground="DarkSlateBlue"></Button>
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Пользователи" FontSize="15" FontWeight="DemiBold"  Margin="13,-2,-13,12" Foreground="DarkSlateBlue"/>
+                        <DataGrid x:Name="UserInfoDataGrid" Height="232" HorizontalAlignment="Center" Margin="0,37,0,-37" IsEnabled="True" IsReadOnly="True" SelectionChanged="UserInfoDataGrid_SelectionChanged">
+                            <DataGrid.Columns>
+                                <!--<DataGridTextColumn Header="Id" Width="50" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Имя" Width="100" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Фамилия" Width="100" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Email" Width="100" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Логин" Width="100" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Пароль" Width="100" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Роль" Width="70" IsReadOnly="True"/>-->
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+                    <!--<ComboBox x:Name="usersBox" Width="637"/>-->
+                </StackPanel>
+            </Border>
+            <Button x:Name="deleteUserBtn" Content="Удалить пользователя" Margin="385,446,373,126" Background="DarkSlateBlue" IsEnabled="False" Click="deleteUserBtn_Click"/>
+            <Button x:Name="toDocBtn" Content="Вывести информацию о пользователе в документ" Margin="385,492,373,80" Background="DarkSlateBlue" IsEnabled="True"/>
+            <Button x:Name="registNewUserBtn" Content="Зарегистрировать нового пользователя" Margin="385,541,372,31" Background="DarkSlateBlue"/>
         </Grid>
     </Grid>
 </Window>
