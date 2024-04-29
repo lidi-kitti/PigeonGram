@@ -11,6 +11,7 @@ namespace wcf_chat
     [ServiceContract(CallbackContract = typeof(IServerChatCallback))]
     public interface IServiceChat
     {
+
         [OperationContract(IsOneWay = true)]
         void SendMsg(string UserFrom, string UserTo, string MessageData);
     }

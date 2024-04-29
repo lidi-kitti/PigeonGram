@@ -73,8 +73,10 @@
     </Window.Resources>
 
     <Grid>
+
+
         <!--окно авторизации-->
-        <Grid x:Name="logWinGrid" Visibility="Visible">
+        <Grid x:Name="logWinGrid" Visibility="Hidden">
             <Border MinWidth="400" Margin="15" Background="PowderBlue" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
@@ -116,9 +118,9 @@
 
         <!--главное окно-->
         <Border x:Name="mainWinBorder" CornerRadius="20"
-            Background="PowderBlue" Visibility="Hidden" >
+            Background="PowderBlue" Visibility="Visible" >
 
-            <Grid x:Name="mainWinGrid" Visibility="Hidden">
+            <Grid x:Name="mainWinGrid" Visibility="Visible">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
@@ -189,6 +191,10 @@
                     <Grid 
                     Height="75"
                     Margin="1,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <!--Title-->
                             <ColumnDefinition Width="60"/>
@@ -201,18 +207,18 @@
 
                         </Grid.ColumnDefinitions>
                         <TextBlock
-                        Text="Чаты"
+                        Text="Пользователи"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
+                        VerticalAlignment="Top"
                         FontSize="18"
-                        FontWeight="SemiBold" Margin="21,0,0,0" Grid.ColumnSpan="2"/>
+                        FontWeight="SemiBold" Margin="21,26,0,0" Grid.ColumnSpan="2"/>
                         <!--Search Button-->
                         <Button
                         Grid.Column="2"
                         x:Name="btnChatSeacrhButton"
                         Command="{Binding OpenSearchCommand}"
                         Content="{StaticResource search}"
-                        Style="{StaticResource IconButtonStyle}"
+                        Style="{StaticResource IconButtonStyle}" Grid.ColumnSpan="2" Margin="0,12,30,13" Grid.RowSpan="2"
                         />
                         <!-- More Options Popup Menu-->
                         <ToggleButton 
@@ -220,13 +226,37 @@
                         x:Name="btnMoreOptions"
                         Content="{StaticResource more}"
                         Command="{Binding WindowsMoreOptionsCommand}"
-                        Style="{StaticResource ToggleIconButtonStyle}"/>
+                        Style="{StaticResource ToggleIconButtonStyle}" Margin="5,22,5,8"/>
                         <Button 
-                        Background="DarkSlateBlue"
+                        Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
                         Grid.Column="1"
-                        x:Name="addNewContact"
-                        Content="Добавить контакт" Margin="68,22,16,21"
-                            Click="addNewContact_Click"/>
+                            BorderBrush="DarkSlateBlue"
+                        x:Name="myProfileInfo"
+                        Margin="201,19,13,1"
+                             Click="myProfileInfo_Click" RenderTransformOrigin="-0.04,0.503">
+                            <materialDesign:PackIcon Kind="UserEdit" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
+
+                        <Button 
+                        Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                        Grid.Column="1"
+                            BorderBrush="DarkSlateBlue"
+                        x:Name="adminWinInfoBtn"
+                        Margin="144,19,70,1"
+                            Click="adminWinInfoBtn_Click">
+                            <materialDesign:PackIcon Kind="Info" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
+
+                        <Button 
+                        Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                        Grid.Column="1"
+                            x:Name="fileStorageBtn"
+                            BorderBrush="DarkSlateBlue"
+                        Margin="93,19,121,1"
+                            Click="fileStorageBtn_Click"
+                              RenderTransformOrigin="-0.04,0.503">
+                            <materialDesign:PackIcon Kind="File" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
 
                     </Grid>
                     <!--#region SearchBox-->
@@ -284,7 +314,7 @@
                     <!--#region Chats List-->
                     <!--<customcontrols:ChatList Grid.Row="3"/>-->
                     <!--  Окно пользователей  -->
-                    <ListBox Background="Purple"
+                    <ListBox Background="Transparent"
                     x:Name="usersListBox"
                     SelectedItem="{Binding SelectedParticipant}"                     
                     Grid.Row="3" 
@@ -306,7 +336,7 @@
                      />-->
 
 
-                <ListBox Background="Red" Visibility="Hidden"
+                <ListBox Background="Transparent" Visibility="Hidden"
                          x:Name="messageTest" Grid.ColumnSpan="2" Margin="403,73,3,113" Grid.Row="1"/>
 
                 <!--красивая панелька-->
@@ -654,22 +684,62 @@ ElementName=ConversationMoreOptions}" Value="True">
 
             </Grid>
         </Border>
-        <Grid x:Name="addNewContactGrid" Visibility="Hidden">
-            <Border MinWidth="400" Margin="15" Background="PowderBlue" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+
+        <!--для изменения профиля-->
+        <Grid x:Name="myRrofileInfoGrid" Visibility="Hidden" VerticalAlignment="Center">
+            <Border MinWidth="400" Margin="425,-17,425,0" Background="PowderBlue" VerticalAlignment="Top" Padding="30" MaxWidth="550" CornerRadius="20" Height="501">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
                 </Border.Effect>
                 <StackPanel>
-                    <TextBlock Text="Добавить контакт" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                    <TextBlock Text="Мой профиль" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
                     <Grid Margin="0 0 0 20">
                         <Button x:Name="backToMainWinBtn" HorizontalAlignment="Left" Content="Назад" Click="backToMainWinBtn_Click" Style="{StaticResource MaterialDesignFlatButton}"></Button>
                     </Grid>
-                    <Grid Margin="0 0 0 20"/>
-                    <TextBox x:Name="addNewContactTB" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                    <Button x:Name="findNewContactBtn" Content="Найти" Margin="0 20" Background="DarkSlateBlue" Click="findNewContactBtn_Click" Cursor="Hand"></Button>
+                    <Grid>
+                        <Image x:Name="pictureSet" Margin="75,12,77,19"/>
+                        <!--<materialDesign:PackIcon x:Name="pictureSet" Kind="AccountCircle" Width="340" Height="130"/>-->
+                        <Button x:Name="newPhoto" Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                        BorderBrush="DarkSlateBlue"
+                        Click="newPhoto_Click"
+                        ToolTip="Click to select picture" Margin="231,81,69,9">
+                            <materialDesign:PackIcon Kind="FileImage" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
+                    </Grid>
+
                 </StackPanel>
             </Border>
+            <TextBox HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsEnabled="False"/>
+            <Button x:Name="changeProfileBtn" Content="Сохранить изменения" Background="DarkSlateBlue" HorizontalAlignment="Center" Margin="0,429,0,0" VerticalAlignment="Top" Click="changeProfileBtn_Click"/>
+        </Grid>
 
+        <!--для администраторов (удаление пользователей, выгрузка инфы в документы, регистрация новых пользователей)-->
+        <Grid x:Name="adminInfoGrid" Visibility="Hidden" VerticalAlignment="Center">
+            <Border MinWidth="700" Margin="175,17,165,0" Background="PowderBlue" VerticalAlignment="Top" Padding="30" MaxWidth="550" CornerRadius="20" Height="587">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Администратор" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                    <Grid Margin="0 0 0 20">
+                        <Button x:Name="backToMainFAdminWinBtn" HorizontalAlignment="Left" Content="Назад" Style="{StaticResource MaterialDesignFlatButton}" Foreground="DarkSlateBlue"></Button>
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Пользователи" FontSize="15" FontWeight="DemiBold"  Margin="13,-2,-13,12" Foreground="DarkSlateBlue"/>
+                        <DataGrid x:Name="UserInfoDataGrid" Height="232" HorizontalAlignment="Center" Margin="0,37,0,-37" IsEnabled="True" IsReadOnly="True" SelectionChanged="UserInfoDataGrid_SelectionChanged">
+                            <DataGrid.Columns>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <Button x:Name="deleteUserBtn" Content="Удалить пользователя" Margin="385,446,373,126" Background="DarkSlateBlue" IsEnabled="False" Click="deleteUserBtn_Click"/>
+            <Button x:Name="toDocBtn" Content="Вывести информацию о пользователе в документ" Margin="385,492,373,80" Background="DarkSlateBlue" IsEnabled="False" Click="toDocBtn_Click"/>
+            <Button x:Name="registNewUserBtn" Content="Зарегистрировать нового пользователя" Margin="385,541,372,31" Background="DarkSlateBlue"/>
         </Grid>
     </Grid>
 </Window>
