@@ -22,6 +22,9 @@ using System.ServiceModel;
 using System.Windows.Interop;
 using Microsoft.Win32;
 using System.IO;
+using System.Xml.Linq;
+using Microsoft.Office.Interop.Word;
+using FirebaseStorageExample;
 
 namespace app_interface
 {
@@ -30,7 +33,7 @@ namespace app_interface
     /// </summary>
     /// 
 
-    public partial class MainWindow : Window, IServiceChatCallback
+    public partial class MainWindow : System.Windows.Window, IServiceChatCallback
     {
 
         ServiceReference1.ServiceChatClient client;
@@ -50,33 +53,8 @@ namespace app_interface
             InitializeComponent();
 
             client = new ServiceChatClient(new InstanceContext(this));
-
-            //fill_Users();
             fiil_table();
         }
-
-        //void fill_Users()
-        //{
-        //    string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
-        //    SqlConnection connection = new SqlConnection(connectionString);
-
-        //    // Напишите SQL-запрос для извлечения значений
-        //    string query = "select Login from Users";
-
-        //    // Создаем объект DataAdapter для выполнения запроса
-        //    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-        //    DataSet dataSet = new DataSet();
-
-        //    // Заполняем набор данных с помощью DataAdapter
-        //    dataAdapter.Fill(dataSet, "Login");
-
-        //    // Создаем объект DataTable, куда будем загружать данные
-        //    DataTable dt = dataSet.Tables["Login"];
-
-        //    // Привязываем данные к свойству ItemsSource вашего ComboBox
-        //    usersBox.ItemsSource = dt.DefaultView;
-        //    usersBox.DisplayMemberPath = "Login";
-        //}
 
         void fiil_table()
         {
@@ -93,7 +71,7 @@ namespace app_interface
                 SqlDataReader reader = command.ExecuteReader();
 
                 // Создание DataTable и загрузка данных
-                DataTable dataTable = new DataTable();
+                System.Data.DataTable dataTable = new System.Data.DataTable();
                 dataTable.Load(reader);
 
                 // Привязка DataTable к DataGrid (предварительно настроив DataGrid в XAML)
@@ -127,7 +105,7 @@ namespace app_interface
         private void btnClose_Click_1(object sender, RoutedEventArgs e)
         //to close the window
         {
-            Application.Current.Shutdown();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void Conversation_Loaded(object sender, RoutedEventArgs e)
@@ -155,7 +133,7 @@ namespace app_interface
             string hashedPass = MyHash.HashPassword(password);
 
             SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
+            System.Data.DataTable table = new System.Data.DataTable();
 
             string querystring = $"select * from Users where Login = '{login}' and Hashed_Password = '{hashedPass}'";
 
@@ -462,6 +440,71 @@ namespace app_interface
             adminInfoGrid.Visibility = Visibility.Visible;
             mainWinBorder.Visibility = Visibility.Hidden;
             mainWinGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void toDocBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView row = (DataRowView)UserInfoDataGrid.SelectedItems[0];
+            int userId = (int)row.Row.ItemArray[0]; // Получаем значение из первой ячейки
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+            string query = $"select ID_User, First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank from Users where ID_User = {userId}";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string message = "";
+
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        message += reader.GetName(i) + ": " + reader.GetValue(i).ToString() + "\n"; // Добавляем название поля и значение
+                    }
+
+                    //MessageBox.Show(message, "Данные пользователя"); // Выводим результат в MessageBox с заголовком
+
+                    SaveFileDialog saveFile = new SaveFileDialog();
+                    saveFile.Filter = "Документ Word (*.docx)|*.docx";
+
+                    if (saveFile.ShowDialog() == true && saveFile.FileName != "")
+                    {
+                        string fileName = saveFile.FileName;
+
+                        // Создаем приложение Word и документ
+                        Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+                        Document document = wordApp.Documents.Add();
+
+                        // Записываем сообщение в документ
+                        document.Content.Text = message;
+
+                        // Сохраняем документ в формате .docx
+                        object filePath = fileName;
+                        document.SaveAs2(filePath, WdSaveFormat.wdFormatXMLDocument);
+
+                        // Закрываем документ и приложение Word
+                        document.Close();
+                        wordApp.Quit();
+
+                        MessageBox.Show("Сообщение сохранено в файле .docx", "Успешно");
+                    }
+
+                }
+            }
+        }
+
+        private async void fileStorageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string selectedFilePath = openFileDialog.FileName;
+
+                FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper();
+                await firebaseStorageHelper.UploadFileToFirebaseStorage(selectedFilePath);
+            }
         }
     }
 }

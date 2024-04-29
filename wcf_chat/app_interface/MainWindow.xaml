@@ -76,7 +76,7 @@
 
 
         <!--окно авторизации-->
-        <Grid x:Name="logWinGrid" Visibility="Visible">
+        <Grid x:Name="logWinGrid" Visibility="Hidden">
             <Border MinWidth="400" Margin="15" Background="PowderBlue" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
@@ -118,9 +118,9 @@
 
         <!--главное окно-->
         <Border x:Name="mainWinBorder" CornerRadius="20"
-            Background="PowderBlue" Visibility="Hidden" >
+            Background="PowderBlue" Visibility="Visible" >
 
-            <Grid x:Name="mainWinGrid" Visibility="Hidden">
+            <Grid x:Name="mainWinGrid" Visibility="Visible">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
@@ -245,6 +245,17 @@
                         Margin="144,19,70,1"
                             Click="adminWinInfoBtn_Click">
                             <materialDesign:PackIcon Kind="Info" Width="20" Height="20" Background="DarkSlateBlue"/>
+                        </Button>
+
+                        <Button 
+                        Background="DarkSlateBlue" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                        Grid.Column="1"
+                            x:Name="fileStorageBtn"
+                            BorderBrush="DarkSlateBlue"
+                        Margin="93,19,121,1"
+                            Click="fileStorageBtn_Click"
+                              RenderTransformOrigin="-0.04,0.503">
+                            <materialDesign:PackIcon Kind="File" Width="20" Height="20" Background="DarkSlateBlue"/>
                         </Button>
 
                     </Grid>
@@ -720,22 +731,14 @@ ElementName=ConversationMoreOptions}" Value="True">
                         <TextBlock Text="Пользователи" FontSize="15" FontWeight="DemiBold"  Margin="13,-2,-13,12" Foreground="DarkSlateBlue"/>
                         <DataGrid x:Name="UserInfoDataGrid" Height="232" HorizontalAlignment="Center" Margin="0,37,0,-37" IsEnabled="True" IsReadOnly="True" SelectionChanged="UserInfoDataGrid_SelectionChanged">
                             <DataGrid.Columns>
-                                <!--<DataGridTextColumn Header="Id" Width="50" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Имя" Width="100" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Фамилия" Width="100" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Email" Width="100" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Логин" Width="100" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Пароль" Width="100" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Роль" Width="70" IsReadOnly="True"/>-->
                             </DataGrid.Columns>
                         </DataGrid>
 
                     </Grid>
-                    <!--<ComboBox x:Name="usersBox" Width="637"/>-->
                 </StackPanel>
             </Border>
             <Button x:Name="deleteUserBtn" Content="Удалить пользователя" Margin="385,446,373,126" Background="DarkSlateBlue" IsEnabled="False" Click="deleteUserBtn_Click"/>
-            <Button x:Name="toDocBtn" Content="Вывести информацию о пользователе в документ" Margin="385,492,373,80" Background="DarkSlateBlue" IsEnabled="True"/>
+            <Button x:Name="toDocBtn" Content="Вывести информацию о пользователе в документ" Margin="385,492,373,80" Background="DarkSlateBlue" IsEnabled="False" Click="toDocBtn_Click"/>
             <Button x:Name="registNewUserBtn" Content="Зарегистрировать нового пользователя" Margin="385,541,372,31" Background="DarkSlateBlue"/>
         </Grid>
     </Grid>
