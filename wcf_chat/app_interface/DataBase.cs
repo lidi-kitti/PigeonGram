@@ -8,7 +8,7 @@ namespace login_registration
 
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=""10.0.13.26\SQLDEGREE, 1433""; Network Library = DBMSSOCN; Initial Catalog = Database; User ID=sa;Password=12345");
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-S3L918JB\SQLDEGREE;Initial Catalog=Database;Integrated Security=True");
 
 
 
