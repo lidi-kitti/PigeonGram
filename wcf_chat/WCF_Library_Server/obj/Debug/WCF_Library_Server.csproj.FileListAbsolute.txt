@@ -11,3 +11,16 @@ C:\Users\samsung\Desktop\Новая папка\wcf_chat\WCF_Library_Server\obj\D
 C:\Users\samsung\Desktop\Новая папка\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Library_Server.csproj.CopyComplete
 C:\Users\samsung\Desktop\Новая папка\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Library_Server.dll
 C:\Users\samsung\Desktop\Новая папка\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Library_Server.pdb
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\WCF_Library_Server.dll.config
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\WCF_Library_Server.dll
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\WCF_Library_Server.pdb
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\EntityFramework.dll
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\PresentationFramework.dll
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\EntityFramework.xml
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Library_Server.csproj.AssemblyReference.cache
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Library_Server.csproj.CoreCompileInputs.cache
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Libr.62F8E439.Up2Date
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Library_Server.dll
+D:\pigeongram\PigeonGram\wcf_chat\WCF_Library_Server\obj\Debug\WCF_Library_Server.pdb
