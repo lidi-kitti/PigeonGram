@@ -19,6 +19,12 @@ using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using app_interface.ServiceReference1;
 using System.ServiceModel;
+using System.Windows.Interop;
+using Microsoft.Win32;
+using System.IO;
+using System.Xml.Linq;
+using Microsoft.Office.Interop.Word;
+using FirebaseStorageExample;
 
 namespace app_interface
 {
@@ -27,7 +33,7 @@ namespace app_interface
     /// </summary>
     /// 
 
-    public partial class MainWindow : Window, ServiceReference1.IServiceChatCallback
+    public partial class MainWindow : System.Windows.Window, IServiceChatCallback
     {
 
         ServiceReference1.ServiceChatClient client;
@@ -45,9 +51,37 @@ namespace app_interface
         public MainWindow()
         {
             InitializeComponent();
+
+            client = new ServiceChatClient(new InstanceContext(this));
+            fiil_table();
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        void fiil_table()
+        {
+            // Строка подключения к базе данных
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+            // Создание соединения с базой данных
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Создание и выполнение SQL-запроса
+                string query = "select ID_User, First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank from Users";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Создание DataTable и загрузка данных
+                System.Data.DataTable dataTable = new System.Data.DataTable();
+                dataTable.Load(reader);
+
+                // Привязка DataTable к DataGrid (предварительно настроив DataGrid в XAML)
+                UserInfoDataGrid.ItemsSource = dataTable.DefaultView;
+            }
+
+        }
+
+
+    private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
@@ -71,7 +105,7 @@ namespace app_interface
         private void btnClose_Click_1(object sender, RoutedEventArgs e)
         //to close the window
         {
-            Application.Current.Shutdown();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void Conversation_Loaded(object sender, RoutedEventArgs e)
@@ -96,11 +130,12 @@ namespace app_interface
         {
             string login = emailLogBox.Text.Trim().ToLower();
             string password = passwordLogBox.Password.Trim();
+            string hashedPass = MyHash.HashPassword(password);
 
             SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
+            System.Data.DataTable table = new System.Data.DataTable();
 
-            string querystring = $"select * from Users where Login = '{login}' and Hashed_Password = '{password}'";
+            string querystring = $"select * from Users where Login = '{login}' and Hashed_Password = '{hashedPass}'";
 
             SqlCommand command = new SqlCommand(querystring, database.getConnection());
 
@@ -115,8 +150,7 @@ namespace app_interface
                 mainWinGrid.Visibility = Visibility.Visible;
 
                 string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
-                string query = $"SELECT Login FROM Users where ID_User = (select ID_Added_User from Chats)";
-
+                string query = $"SELECT Login FROM Users";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -128,20 +162,18 @@ namespace app_interface
                             while (reader.Read())
                             {
                                 string value = reader["Login"].ToString();
-                                //if (value != login)
-                                //{
-                                    usersListBox.Items.Add(value);
-                                //}
+                                usersListBox.Items.Add(value);
                             }
                         }
                     }
                 }
+
             }
             else
             {
                 MessageBox.Show("Такого аккаунта не существует.");
             }
-            client = new ServiceChatClient(new System.ServiceModel.InstanceContext(this));
+            client = new ServiceChatClient(new InstanceContext(this));
         }
 
         // регистрация
@@ -173,6 +205,7 @@ namespace app_interface
             }
             else if (password.Length < 5)
             {
+                MessageBox.Show("Слишком короткий пароль!");
                 passwordRegBox.Password = "Это поле введено некорректно!";
                 passwordRegBox.Background = Brushes.DarkRed;
             }
@@ -183,6 +216,10 @@ namespace app_interface
             }
             else
             {
+
+                string path = "C:\\Users\\samsung\\Pictures\\user with no photo.png";
+                byte[] imageBytes = File.ReadAllBytes(path);
+
                 fisrtNameRegBox.ToolTip = "";
                 fisrtNameRegBox.Background = Brushes.Transparent;
 
@@ -198,103 +235,46 @@ namespace app_interface
                 confirmPasswordRegBox.ToolTip = "";
                 confirmPasswordRegBox.Background = Brushes.Transparent;
 
-                string querystring = $"insert into Users (First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank) values ('{firstName}', '{lastName}', '{email}', '{login}', '{password}', '2')";
-                SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
+                string hashedPass;
+                hashedPass = MyHash.HashPassword(password);
 
-                dataBase.openConnection();
+                string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
 
-                if (command.ExecuteNonQuery() == 1)
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    MessageBox.Show("Регистрация успешна");
-                    regWinGrid.Visibility = Visibility.Hidden;
-                    mainWinBorder.Visibility = Visibility.Visible;
-                    mainWinGrid.Visibility = Visibility.Visible;
+                    connection.Open();
 
+                    string querystring = $"INSERT INTO Users (First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank, Is_Logged, User_Photo) " +
+                                         $"VALUES ('{firstName}', '{lastName}', '{email}', '{login}', '{hashedPass}', '2', '0', @UserPhoto)";
+
+                    using (SqlCommand command = new SqlCommand(querystring, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserPhoto", imageBytes);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected == 1)
+                        {
+                            MessageBox.Show("Регистрация успешна. Пожалуйста, войдите в аккаунт для продолжения работы.");
+                            logWinGrid.Visibility = Visibility.Visible;
+                            regWinGrid.Visibility = Visibility.Hidden;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Аккаунт не создан");
+                        }
+                    }
                 }
-
-                else
-                {
-                    MessageBox.Show("Аккаунт не создан");
-                }
-
-                dataBase.closeConnection();
             }
+           
         }
-
-        private void addNewContact_Click(object sender, RoutedEventArgs e)
-        {
-            addNewContactGrid.Visibility = Visibility.Visible;
-            mainWinGrid.Visibility = Visibility.Hidden;
-            mainWinBorder.Visibility = Visibility.Hidden;
-        }
+           
 
         private void backToMainWinBtn_Click(object sender, RoutedEventArgs e)
         {
-            addNewContactGrid.Visibility = Visibility.Hidden;
+            myRrofileInfoGrid.Visibility = Visibility.Hidden;
             mainWinGrid.Visibility = Visibility.Visible;
             mainWinBorder.Visibility = Visibility.Visible;
-        }
-
-        private void findNewContactBtn_Click(object sender, RoutedEventArgs e)
-        {
-            DataBase dataBase = new DataBase();
-
-            string mainLog = emailLogBox.Text;
-            string login = addNewContactTB.Text.Trim();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
-
-            string querystring = $"select Login from Users where Login = '{login}'";
-
-            SqlCommand command = new SqlCommand(querystring, database.getConnection());
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (mainLog != login)
-            {
-                if (table.Rows.Count == 1)
-                {
-                    addNewContactGrid.Visibility = Visibility.Hidden;
-                    mainWinGrid.Visibility = Visibility.Visible;
-                    mainWinBorder.Visibility = Visibility.Visible;
-                    string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
-
-                    string query = $"SELECT Login FROM Users where Login = '{login}'";
-
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
-
-                        using (SqlCommand command2 = new SqlCommand(query, connection))
-                        {
-                            using (SqlDataReader reader = command2.ExecuteReader())
-                            {
-                                while (reader.Read())
-                                {
-                                    string value = reader["Login"].ToString();
-                                    usersListBox.Items.Add(value);
-                                }
-                            }
-                        }
-                    }
-                    string querystring1 = $"insert into Chats (ID_Logged_User, ID_Added_User) values ((select ID_User from Users where Login = '{mainLog}'), (select ID_User from Users where Login = '{login}'))";
-                    SqlCommand command4 = new SqlCommand(querystring1, dataBase.getConnection());
-
-                    dataBase.openConnection();
-
-                    command4.ExecuteNonQuery();
-
-                }
-            }
-            else if (mainLog == login)
-            {
-                MessageBox.Show("Себя добавить нельзя");
-            }
-             else
-            {
-                MessageBox.Show("Такого пользователя нет");
-            }
         }
 
         private void usersListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -315,27 +295,215 @@ namespace app_interface
 
         private void sendMsgBtn_Click(object sender, RoutedEventArgs e)
         {
-            //WCF_Service wcfService = new WCF_Service();
-            //if (usersListBox.SelectedItems != null && usersListBox.SelectedItems.Count > 0)
-            //{
-            //    string receiver = usersListBox.SelectedItem.ToString();
-            //    string login = emailLogBox.Text;
-            //    foreach (var selectedUser in usersListBox.SelectedItems)
-            //    {
-            //        string selectedChat = selectedUser.ToString();
-            //        string message = MessageTB.Text;
-
-            //        this.Dispatcher.Invoke(() =>
-            //        {
-            //            client.SendMsg(login, selectedChat, message);
-            //            MessageTB.Text = "";
-            //        });
-            //    }
-            //}
-            if (usersListBox.SelectedItem != null) 
+            if (usersListBox.SelectedItem != null && usersListBox.SelectedItems.Count>0)
             {
-                client.SendMsg(logRegBox.Text, usersListBox.SelectedItem.ToString(), MessageTB.Text.ToString());
-                MessageTB.Text = string.Empty;
+                string reciver = usersListBox.SelectedItem.ToString();
+                string login = emailLogBox.Text;
+                foreach (var selectedUser in usersListBox.SelectedItems)
+                {
+                    string selectedChat = selectedUser.ToString();
+                    string message = MessageTB.Text;
+                    client.SendMsg(login, selectedChat, message);
+                    MessageTB.Text = string.Empty;
+                }
+            }
+        }
+
+        private void myProfileInfo_Click(object sender, RoutedEventArgs e)
+        {
+            myRrofileInfoGrid.Visibility = Visibility.Visible;
+            mainWinGrid.Visibility = Visibility.Hidden;
+            mainWinBorder.Visibility = Visibility.Hidden;
+            string login = emailLogBox.Text;
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string querystring = $"SELECT User_Photo FROM Users where Login = '{login}'";
+
+                using (SqlCommand command = new SqlCommand(querystring, connection))
+                {
+                    command.Parameters.AddWithValue("@Login", login);
+
+                    byte[] imageBytes = (byte[])command.ExecuteScalar();
+
+                    if (imageBytes != null)
+                    {
+                        BitmapImage bitmapImage = new BitmapImage();
+                        bitmapImage.BeginInit();
+                        bitmapImage.StreamSource = new MemoryStream(imageBytes);
+                        bitmapImage.EndInit();
+
+                        pictureSet.Source = bitmapImage;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Изображение не найдено.");
+                    }
+                }
+            }
+
+        }
+
+
+        //открыть диалоговое окно и выбрать картинку
+        string picAddress = "";
+        private void newPhoto_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            if ((bool)openFile.ShowDialog())
+            {
+                picAddress = openFile.FileName;
+                pictureSet.Source =
+                    new BitmapImage(new Uri(openFile.FileName, UriKind.Absolute)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache }; ;
+            }
+        }
+
+        //сохраняет картинку в бд в виде массива байтов
+        private void changeProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string login = emailLogBox.Text;
+            BitmapImage bitmapImage = (BitmapImage)pictureSet.Source;
+
+            byte[] imageBytes;
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
+                encoder.Save(memoryStream);
+                imageBytes = memoryStream.ToArray();
+            }
+
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+            string query = "UPDATE Users SET User_Photo = @User_Photo WHERE Login = @Login";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add("@User_Photo", SqlDbType.VarBinary, -1).Value = imageBytes;
+                    command.Parameters.Add("@Login", SqlDbType.VarChar).Value = login;
+
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Изменения успешно сохранены");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Произошла ошибка при сохранении данных, попробуйте позже.");
+                    }
+                }
+            }
+        }
+
+        private void UserInfoDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            deleteUserBtn.IsEnabled = true;
+            toDocBtn.IsEnabled = true;
+        }
+
+        private void deleteUserBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы уверены, что хотите удалить запись?", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                int userId;
+                if (UserInfoDataGrid.SelectedItems.Count > 0)
+                {
+                    DataRowView row = (DataRowView)UserInfoDataGrid.SelectedItems[0];
+                    userId = (int)row.Row.ItemArray[0]; // Получаем значение из первой ячейки
+                    string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+                    string query = $"DELETE FROM Users WHERE ID_User={userId}";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.ExecuteNonQuery();
+
+                            MessageBox.Show("Пользователь успешно удален", "Успешное удаление", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                            fiil_table();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void adminWinInfoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            adminInfoGrid.Visibility = Visibility.Visible;
+            mainWinBorder.Visibility = Visibility.Hidden;
+            mainWinGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void toDocBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView row = (DataRowView)UserInfoDataGrid.SelectedItems[0];
+            int userId = (int)row.Row.ItemArray[0]; // Получаем значение из первой ячейки
+            string connectionString = "Data Source=LAPTOP-S3L918JB\\SQLDEGREE;Initial Catalog=Database;Integrated Security=True";
+            string query = $"select ID_User, First_Name, Last_Name, Email, Login, Hashed_Password, User_Rank from Users where ID_User = {userId}";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string message = "";
+
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        message += reader.GetName(i) + ": " + reader.GetValue(i).ToString() + "\n"; // Добавляем название поля и значение
+                    }
+
+                    //MessageBox.Show(message, "Данные пользователя"); // Выводим результат в MessageBox с заголовком
+
+                    SaveFileDialog saveFile = new SaveFileDialog();
+                    saveFile.Filter = "Документ Word (*.docx)|*.docx";
+
+                    if (saveFile.ShowDialog() == true && saveFile.FileName != "")
+                    {
+                        string fileName = saveFile.FileName;
+
+                        // Создаем приложение Word и документ
+                        Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+                        Document document = wordApp.Documents.Add();
+
+                        // Записываем сообщение в документ
+                        document.Content.Text = message;
+
+                        // Сохраняем документ в формате .docx
+                        object filePath = fileName;
+                        document.SaveAs2(filePath, WdSaveFormat.wdFormatXMLDocument);
+
+                        // Закрываем документ и приложение Word
+                        document.Close();
+                        wordApp.Quit();
+
+                        MessageBox.Show("Сообщение сохранено в файле .docx", "Успешно");
+                    }
+
+                }
+            }
+        }
+
+        private async void fileStorageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string selectedFilePath = openFileDialog.FileName;
+
+                FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper();
+                await firebaseStorageHelper.UploadFileToFirebaseStorage(selectedFilePath);
             }
         }
     }

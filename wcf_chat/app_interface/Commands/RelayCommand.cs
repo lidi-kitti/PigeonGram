@@ -31,6 +31,7 @@ namespace app_interface.Commands
 
         public void Execute(object parameter)
         {
+        //    parameter = null;
             execute(parameter);
         }
         public RelayCommand(Action<object> execute, Func<object,bool> canExecute = null) 

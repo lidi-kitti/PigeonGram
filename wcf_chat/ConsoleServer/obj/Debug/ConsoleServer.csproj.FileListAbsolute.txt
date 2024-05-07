@@ -1,0 +1,31 @@
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\ConsoleServer.exe.config
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\ConsoleServer.exe
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\ConsoleServer.pdb
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.dll
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\WCF_Library_Server.dll
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\WCF_Library_Server.pdb
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\WCF_Library_Server.dll.config
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.xml
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.csproj.AssemblyReference.cache
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.csproj.CoreCompileInputs.cache
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.csproj.CopyComplete
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.exe
+C:\Users\samsung\Desktop\Новая папка\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.pdb
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\ConsoleServer.exe.config
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\ConsoleServer.exe
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\ConsoleServer.pdb
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.dll
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.SqlServer.dll
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\WCF_Library_Server.dll
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\WCF_Library_Server.pdb
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\WCF_Library_Server.dll.config
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.xml
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\bin\Debug\EntityFramework.SqlServer.xml
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.csproj.AssemblyReference.cache
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.csproj.CoreCompileInputs.cache
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\obj\Debug\ConsoleS.C4296DF3.Up2Date
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.exe
+D:\pigeongram\PigeonGram\wcf_chat\ConsoleServer\obj\Debug\ConsoleServer.pdb
